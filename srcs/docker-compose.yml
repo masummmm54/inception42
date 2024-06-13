@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   nginx:
-    build : ./requirements/nginx
+    build: ./requirements/nginx
     ports:
       - "443:443"
     volumes:
@@ -13,28 +13,29 @@ services:
     networks:
       - wp-network
 
-
   wordpress:
     build: ./requirements/wordpress
     environment:
-      - WORDPERSS_DB_HOST=mariadb
+      - WORDPRESS_DB_HOST=mariadb
       - WORDPRESS_DB_USER=${MYSQL_USER}
-      - WORDPRESS_DB_PASSWORD_FILE=/run/secrets/db_password.txt
+      - WORDPRESS_DB_PASSWORD_FILE=/run/secrets/db_password
       - WORDPRESS_DB_NAME=${MYSQL_DATABASE}
     volumes:
       - wordpress_data:/var/www/html
     networks:
       - wp-network
+    secrets:
+      - db_password
     ports:
       - "80:80"
 
   mariadb:
     build: ./requirements/mariadb
     environment:
-      - MYSQL_ROOT_PASSWORD_FILE=/run/secrets/db_root_password.txt
+      - MYSQL_ROOT_PASSWORD_FILE=/run/secrets/db_root_password
       - MYSQL_DATABASE=${MYSQL_DATABASE}
       - MYSQL_USER=${MYSQL_USER}
-      - MYSQL_PASSWORD_FILE=/run/secrets/db_password.txt
+      - MYSQL_PASSWORD_FILE=/run/secrets/db_password
     volumes:
       - db_data:/var/lib/mysql
     secrets:
@@ -42,7 +43,6 @@ services:
       - db_password
     networks:
       - wp-network
-
 
 volumes:
   db_data:
@@ -53,7 +53,6 @@ secrets:
     file: ./../secrets/db_root_password.txt
   db_password:
     file: ./../secrets/db_password.txt
-
 
 networks:
   wp-network:
