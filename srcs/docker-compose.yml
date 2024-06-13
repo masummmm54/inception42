@@ -19,7 +19,7 @@ services:
     environment:
       - WORDPERSS_DB_HOST=mariadb
       - WORDPRESS_DB_USER=${MYSQL_USER}
-      - WORDPRESS_DB_PASSWORD_FILE=/run/../secrets/db_password.txt
+      - WORDPRESS_DB_PASSWORD_FILE=/run/secrets/db_password.txt
       - WORDPRESS_DB_NAME=${MYSQL_DATABASE}
     volumes:
       - wordpress_data:/var/www/html
@@ -31,10 +31,10 @@ services:
   mariadb:
     build: ./requirements/mariadb
     environment:
-      - MYSQL_ROOT_PASSWORD_FILE=/run/../secrets/db_root_password.txt
+      - MYSQL_ROOT_PASSWORD_FILE=/run/secrets/db_root_password.txt
       - MYSQL_DATABASE=${MYSQL_DATABASE}
       - MYSQL_USER=${MYSQL_USER}
-      - MYSQL_PASSWORD_FILE=/run/../secrets/db_password.txt
+      - MYSQL_PASSWORD_FILE=/run/secrets/db_password.txt
     volumes:
       - db_data:/var/lib/mysql
     secrets:
