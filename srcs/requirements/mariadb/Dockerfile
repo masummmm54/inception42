@@ -1,8 +1,12 @@
-FROM mariadb:10.5
+FROM debian:10.12
 
-ENV MYSQL_ROOT_PASSWORD_FILE=/run/secrets/db_root_password.txt
-ENV MYSQL_PASSWORD_FILE=/run/secrets/db_password.txt
-ENV MYSQL_DATABASE=wordpress
-ENV MYSQL_USER=masum
+#volume /home/aeryilma/data/mariadb/. /var/lib/mysql/.
 
-COPY ./conf/my.cnf /etc/mysql/my.cnf
+RUN apt update -y && apt upgrade -y && apt install mariadb-server vim -y
+
+COPY /conf/50-server.cnf /etc/mysql/mariadb.conf.d/50-server.cnf
+COPY /tools/. /custom/.
+
+EXPOSE 3306 
+
+ENTRYPOINT sh /custom/starter.sh

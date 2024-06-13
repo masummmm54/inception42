@@ -1,8 +1,18 @@
 version: '3.7'
 
 volumes:
-  db_data:
-  wordpress_data:
+  wordpress:
+    name: wordpress
+    driver: local
+    driver_opts:
+       o: bind
+       type: none
+  mariadb:
+    name: mariadb
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
 
 secrets:
   db_root_password:
@@ -18,8 +28,7 @@ networks:
 
 services:
   nginx:
-    build: ./requirements/nginx
-    image: nginx:42
+    build: ./requirements/nginx/.
     ports:
       - "443:443"
     volumes:
@@ -33,38 +42,32 @@ services:
       - .env
     restart: always
   wordpress:
-    build: ./requirements/wordpress
-    environment:
-      - WORDPRESS_DB_HOST=mariadb
-      - WORDPRESS_DB_USER=${MYSQL_USER}
-      - WORDPRESS_DB_PASSWORD_FILE=/run/secrets/db_password
-      - WORDPRESS_DB_NAME=${MYSQL_DATABASE}
+    build: ./requirements/wordpress/.
+    expose:
+      - "9000"
     volumes:
-      - wordpress_data:/var/www/html
+      - wordpress_data:/var/www/wordpress
+    env_file:
+      - .env
     networks:
       - inception
     secrets:
       - db_password
-    ports:
-      - "80:80"
-    env_file:
-      - .env
     restart: always
+    depends_on:
+      - mariadb
   mariadb:
-    build: ./requirements/mariadb
+    build: ./requirements/mariadb/.
     image: mariadb:42
-    environment:
-      - MYSQL_ROOT_PASSWORD_FILE=/run/secrets/db_root_password
-      - MYSQL_DATABASE=${MYSQL_DATABASE}
-      - MYSQL_USER=${MYSQL_USER}
-      - MYSQL_PASSWORD_FILE=/run/secrets/db_password
+    ports:
+      - "3306:3306"
     volumes:
       - db_data:/var/lib/mysql
+    env_file:
+      - .env
     secrets:
       - db_root_password
       - db_password
     networks:
       - inception
     restart: always
-    env_file:
-      - .env
