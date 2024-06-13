@@ -32,8 +32,7 @@ services:
     ports:
       - "443:443"
     volumes:
-      - ./requirements/nginx/conf/ssl:/etc/nginx/ssl
-      - ./requirements/nginx/conf/nginx.conf:/etc/nginx/nginx.conf:ro
+      - wordpress:/var/www/wordpress
     depends_on:
       - wordpress
     networks:
@@ -46,7 +45,7 @@ services:
     expose:
       - "9000"
     volumes:
-      - wordpress_data:/var/www/wordpress
+      - wordpress:/var/www/wordpress
     env_file:
       - .env
     networks:
@@ -62,7 +61,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - db_data:/var/lib/mysql
+      - mariadb:/var/lib/mysql
     env_file:
       - .env
     secrets:
