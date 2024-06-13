@@ -1,0 +1,21 @@
+├── Makefile
+├── secrets
+│   ├── db_password.txt
+│   └── db_root_password.txt
+└── srcs
+    ├── docker-compose.yml
+    └── requirements
+        ├── mariadb
+        │   ├── conf
+        │   │   └── my.cnf
+        │   └── Dockerfile
+        ├── nginx
+        │   ├── conf
+        │   │   ├── nginx.conf
+        │   │   └── ssl
+        │   │       ├── nginx.crt
+        │   │       └── nginx.key
+        │   └── Dockerfile
+        └── wordpress
+            ├── Dockerfile
+            └── wp-config.php
