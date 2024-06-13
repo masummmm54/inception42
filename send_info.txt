@@ -1,6 +1,1 @@
-docker exec -it srcs_nginx_1 /bin/sh
-/ # curl -I http://wordpress:80
-curl: (7) Failed to connect to wordpress port 80 after 4 ms: Couldn't connect to server
-
-docker exec -it srcs_nginx_1 -c 4 wordpress
-OCI runtime exec failed: exec failed: unable to start container process: exec: "-c": executable file not found in $PATH: unknown
+ERROR: for mariadb  Cannot create container for service mariadb: failed to populate volume: error while mounting volume '/var/lib/docker/volumes/mariadb/_data': failed to mount local volume: mount /home/masum/data/mariadb:/var/lib/docker/volumes/mariadb/_data, flags: 0x1000: no such file or directory
