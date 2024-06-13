@@ -1,11 +1,8 @@
-FROM debian:10.12
+# srcs/requirements/mariadb/Dockerfile
 
+FROM mariadb:latest
 
-RUN apt update -y && apt upgrade -y && apt install mariadb-server vim -y
-
-COPY /conf/50-server.cnf /etc/mysql/mariadb.conf.d/50-server.cnf
-COPY /tools/. /custom/.
-
-EXPOSE 3306 
-
-ENTRYPOINT sh /custom/starter.sh
+ENV MYSQL_DATABASE=${MYSQL_DATABASE}
+ENV MYSQL_USER=${MYSQL_USER}
+ENV MYSQL_PASSWORD=${MYSQL_PASSWORD}
+ENV MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}

@@ -1,74 +1,50 @@
-version: '3.7'
-
-volumes:
-  wordpress:
-    name: wordpress
-    driver: local
-    driver_opts:
-       o: bind
-       type: none
-       device: /home/aeryilma/data/wordpress
-  mariadb:
-    name: mariadb
-    driver: local
-    driver_opts:
-      o: bind
-      type: none
-      device: /home/aeryilma/data/mariadb
-
-secrets:
-  db_root_password:
-    file: ./../secrets/db_root_password.txt
-  db_password:
-    file: ./../secrets/db_password.txt
-
-networks:
-  inception:
-    name: inception
-    driver: bridge
-
+version: '3.8'
 
 services:
   nginx:
-    build: ./requirements/nginx/.
+    build:
+      context: ./requirements/nginx
     ports:
       - "443:443"
     volumes:
-      - wordpress:/var/www/wordpress
+      - ./requirements/nginx/conf:/etc/nginx/conf.d
+      - /home/masum/data/nginx:/var/log/nginx
+    environment:
+      DOMAIN_NAME: ${DOMAIN_NAME}
     depends_on:
       - wordpress
     networks:
-      - inception
-    env_file:
-      - .env
-    restart: always
-  wordpress:
-    build: ./requirements/wordpress/.
-    expose:
-      - "9000"
+      - mynetwork
+
+  mariadb:
+    build:
+      context: ./requirements/mariadb
     volumes:
-      - wordpress:/var/www/wordpress
-    env_file:
-      - .env
+      - /home/masum/data/mariadb:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     networks:
-      - inception
-    secrets:
-      - db_password
-    restart: always
+      - mynetwork
+
+  wordpress:
+    build:
+      context: ./requirements/wordpress
+    volumes:
+      - /home/yourlogin/data/wordpress:/var/www/html
+    environment:
+      WORDPRESS_DB_HOST: ${WORDPRESS_DB_HOST}
+      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME}
+      WORDPRESS_DB_USER: ${WORDPRESS_DB_USER}
+      WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD}
     depends_on:
       - mariadb
-  mariadb:
-    build: ./requirements/mariadb/.
-    image: mariadb:42
-    ports:
-      - "3306:3306"
-    volumes:
-      - mariadb:/var/lib/mysql
-    env_file:
-      - .env
-    secrets:
-      - db_root_password
-      - db_password
     networks:
-      - inception
-    restart: always
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge
+
