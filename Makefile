@@ -20,3 +20,5 @@ logs:
 clean: down
 	docker-compose -f srcs/docker-compose.yml rm -f
 	docker volume prune -f
+
+re: clean all
