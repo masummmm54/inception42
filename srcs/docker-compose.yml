@@ -27,7 +27,8 @@ services:
       - wordpress
     networks:
       - wp-network
-
+    env_file:
+      - .env
   wordpress:
     build: ./requirements/wordpress
     environment:
@@ -43,7 +44,6 @@ services:
       - db_password
     ports:
       - "80:80"
-
   mariadb:
     build: ./requirements/mariadb
     environment:
@@ -58,3 +58,5 @@ services:
       - db_password
     networks:
       - wp-network
+    restart:
+      always
