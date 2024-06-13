@@ -1,37 +1,5 @@
-version: '3'
-
-services:
-  # Database
-  db:
-    image: mysql:5.7
-    volumes:
-      -db_data:/var/lib/mysql
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: wordpress
-      MYSQL_USER: wordpress
-      MYSQL_PASSWORD: wordpress
-    networks:
-      - wpsite
-  # Wordpress
-  wordpress:
-    depends_on:
-      - db
-    image: wordpress:latest
-    ports:
-      - '8000:80'
-    restart: always
-    volumes: ['./:/var/www/html']
-    environment:
-      WORDPRESS_DB_HOST: db:3306
-      WORDPRESS_DB_USER: wordpress
-      WORDPRESS_DB_PASSWORD: wordpress
-    networks:
-      - wpsite
-
-networks:
-  wpsite:
-
-volumes:
-  db_data:
+CONTAINER ID   IMAGE              COMMAND                  CREATED              STATUS              PORTS                                   NAMES
+0efcf4ea9c50   srcs_wordpress     "docker-entrypoint.s…"   About a minute ago   Up About a minute   9000/tcp                                srcs_wordpress_1
+be2458ec88f9   srcs_mariadb       "docker-entrypoint.s…"   About a minute ago   Up About a minute   3306/tcp                                srcs_mariadb_1
+a05dfab6edc6   wordpress:latest   "docker-entrypoint.s…"   33 minutes ago       Up 3 minutes        0.0.0.0:8000->80/tcp, :::8000->80/tcp   wordpress_site_wordpress_1
+d70ca214e7ea   mysql:5.7          "docker-entrypoint.s…"   33 minutes ago       Up 3 minutes        3306/tcp, 33060/tcp                     wordpress_site_db_1
