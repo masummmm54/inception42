@@ -1,40 +1,37 @@
-masum@masum-VirtualBox:~/Desktop/projects/inception42$ tree
-.
-├── Makefile
-├── secrets
-│   ├── db_password.txt
-│   └── db_root_password.txt
-├── send_info.txt
-└── srcs
-    ├── docker-compose.yml
-    └── requirements
-        ├── mariadb
-        │   ├── conf
-        │   │   └── 50-server.cnf
-        │   ├── Dockerfile
-        │   └── tools
-        │       ├── installation.sh
-        │       └── starter.sh
-        ├── nginx
-        │   ├── conf
-        │   │   ├── default.conf
-        │   │   ├── nginx.conf
-        │   │   └── ssl
-        │   │       ├── nginx.crt
-        │   │       └── nginx.key
-        │   ├── Dockerfile
-        │   └── tools
-        │       └── script.sh
-        └── wordpress
-            ├── conf
-            │   ├── conf.php
-            │   └── php.conf
-            ├── Dockerfile
-            └── tools
-                ├── script.sh
-                └── starter.sh
+version: '3'
 
-ERROR: Configuration for volume wordpress specifies "device" driver_opt /home/aeryilma/data/wordpress, but a volume with the same name uses a different "device" driver_opt (/home/masum/Desktop/projetcs/inception42/data/wordpress). If you wish to use the new configuration, please remove the existing volume "wordpress" first:
-$ docker volume rm wordpress
-make: *** [Makefile:10: up] Error 1
+services:
+  # Database
+  db:
+    image: mysql:5.7
+    volumes:
+      -db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+    networks:
+      - wpsite
+  # Wordpress
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:latest
+    ports:
+      - '8000:80'
+    restart: always
+    volumes: ['./:/var/www/html']
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+    networks:
+      - wpsite
 
+networks:
+  wpsite:
+
+volumes:
+  db_data:
