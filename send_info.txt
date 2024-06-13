@@ -1,1 +1,35 @@
-ERROR: for mariadb  Cannot create container for service mariadb: failed to populate volume: error while mounting volume '/var/lib/docker/volumes/mariadb/_data': failed to mount local volume: mount /home/masum/data/mariadb:/var/lib/docker/volumes/mariadb/_data, flags: 0x1000: no such file or directory
+masum@masum-VirtualBox:~/Desktop/projects/inception42$ tree
+.
+├── Makefile
+├── secrets
+│   ├── db_password.txt
+│   └── db_root_password.txt
+├── send_info.txt
+└── srcs
+    ├── docker-compose.yml
+    └── requirements
+        ├── mariadb
+        │   ├── conf
+        │   │   └── 50-server.cnf
+        │   ├── Dockerfile
+        │   └── tools
+        │       ├── installation.sh
+        │       └── starter.sh
+        ├── nginx
+        │   ├── conf
+        │   │   ├── default.conf
+        │   │   ├── nginx.conf
+        │   │   └── ssl
+        │   │       ├── nginx.crt
+        │   │       └── nginx.key
+        │   ├── Dockerfile
+        │   └── tools
+        │       └── script.sh
+        └── wordpress
+            ├── conf
+            │   ├── conf.php
+            │   └── php.conf
+            ├── Dockerfile
+            └── tools
+                ├── script.sh
+                └── starter.sh

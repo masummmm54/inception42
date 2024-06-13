@@ -7,14 +7,14 @@ volumes:
     driver_opts:
        o: bind
        type: none
-       device: /home/masum/data/wordpress
+       device: /home/aeryilma/data/wordpress
   mariadb:
     name: mariadb
     driver: local
     driver_opts:
       o: bind
       type: none
-      device: /home/masum/data/mariadb
+      device: /home/aeryilma/data/mariadb
 
 secrets:
   db_root_password:
