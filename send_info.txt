@@ -33,3 +33,8 @@ masum@masum-VirtualBox:~/Desktop/projects/inception42$ tree
             └── tools
                 ├── script.sh
                 └── starter.sh
+
+ERROR: Configuration for volume wordpress specifies "device" driver_opt /home/aeryilma/data/wordpress, but a volume with the same name uses a different "device" driver_opt (/home/masum/Desktop/projetcs/inception42/data/wordpress). If you wish to use the new configuration, please remove the existing volume "wordpress" first:
+$ docker volume rm wordpress
+make: *** [Makefile:10: up] Error 1
+
