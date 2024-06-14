@@ -1,93 +1,274 @@
-.
-├── Makefile
-├── secrets
-│   ├── credentials.txt
-│   ├── db_password.txt
-│   └── db_root_password.txt
-├── send_info.txt
-└── srcs
-    ├── docker-compose.yml
-    └── requirements
-        ├── mariadb
-        │   ├── conf
-        │   │   ├── init.sql
-        │   │   └── my.cnf
-        │   ├── Dockerfile
-        │   └── tools
-        │       └── run.sh
-        ├── nginx
-        │   ├── conf
-        │   │   ├── default.conf
-        │   │   └── nginx.conf
-        │   ├── Dockerfile
-        │   └── tools
-        │       └── run.sh
-        └── wordpress
-            ├── conf
-            │   └── www.conf
-            ├── Dockerfile
-            └── tools
-                └── run.sh
-
-docker-compose -f srcs/docker-compose.yml down
-[+] Running 1/0
- ✔ Network srcs_inception  Removed                                            0.1s 
-docker-compose -f srcs/docker-compose.yml rm -f
-No stopped containers
-docker volume prune -f
-Total reclaimed space: 0B
-docker-compose -f srcs/docker-compose.yml build
-[+] Building 1.1s (28/28) FINISHED                                                 
- => [mariadb internal] load build definition from Dockerfile                  0.0s
- => => transferring dockerfile: 566B                                          0.0s
- => [nginx internal] load metadata for docker.io/library/debian:buster        0.7s
- => [mariadb internal] load .dockerignore                                     0.0s
- => => transferring context: 34B                                              0.0s
- => [nginx 1/6] FROM docker.io/library/debian:buster@sha256:58ce6f1271ae1c8a  0.0s
- => [mariadb internal] load build context                                     0.0s
- => => transferring context: 146B                                             0.0s
- => CACHED [mariadb 2/6] RUN     apt-get update -yq &&         apt-get upgra  0.0s
- => CACHED [mariadb 3/6] COPY    ./tools/run.sh /tmp/                         0.0s
- => CACHED [mariadb 4/6] COPY    ./conf/init.sql /tmp/                        0.0s
- => CACHED [mariadb 5/6] COPY    ./conf/my.cnf /etc/mysql                     0.0s
- => CACHED [mariadb 6/6] RUN     chown -R mysql:mysql /tmp/ &&         chown  0.0s
- => [mariadb] exporting to image                                              0.0s
- => => exporting layers                                                       0.0s
- => => writing image sha256:f57af1c2e93f723746d620018caeede12317c334b63182f9  0.0s
- => => naming to docker.io/library/mariadb                                    0.0s
- => [wordpress internal] load build definition from Dockerfile                0.0s
- => => transferring dockerfile: 535B                                          0.0s
- => [wordpress internal] load .dockerignore                                   0.0s
- => => transferring context: 2B                                               0.0s
- => [wordpress internal] load build context                                   0.0s
- => => transferring context: 116B                                             0.0s
- => CACHED [wordpress 2/5] RUN     apt update -y &&         apt-get upgrade   0.0s
- => CACHED [wordpress 3/5] COPY    ./conf/www.conf /etc/php/7.3/fpm/pool.d/   0.0s
- => CACHED [wordpress 4/5] COPY    ./tools/run.sh /tmp/                       0.0s
- => CACHED [wordpress 5/5] RUN     chmod +x /tmp/run.sh                       0.0s
- => [wordpress] exporting to image                                            0.0s
- => => exporting layers                                                       0.0s
- => => writing image sha256:2b8dbf07629760a855a9dd10b4d51ea67671b772ba2e3706  0.0s
- => => naming to docker.io/library/wordpress                                  0.0s
- => [nginx internal] load build definition from Dockerfile                    0.0s
- => => transferring dockerfile: 624B                                          0.0s
- => [nginx internal] load .dockerignore                                       0.0s
- => => transferring context: 34B                                              0.0s
- => [nginx internal] load build context                                       0.0s
- => => transferring context: 155B                                             0.0s
- => CACHED [nginx 2/6] RUN     apt update -y &&      apt upgrade -y &&        0.0s
- => CACHED [nginx 3/6] COPY    ./conf/default.conf /etc/nginx/sites-availabl  0.0s
- => CACHED [nginx 4/6] COPY    ./conf/nginx.conf /etc/nginx/nginx.conf        0.0s
- => CACHED [nginx 5/6] COPY    ./tools/run.sh /tmp/run.sh                     0.0s
- => CACHED [nginx 6/6] RUN     ln -s /etc/nginx/sites-available/default.conf  0.0s
- => [nginx] exporting to image                                                0.0s
- => => exporting layers                                                       0.0s
- => => writing image sha256:8b5fbd9510977e3dbeac9c4d7ec08a8cb72919a2998a0765  0.0s
- => => naming to docker.io/library/nginx                                      0.0s
-docker-compose -f srcs/docker-compose.yml up -d
-[+] Running 1/2
- ✔ Network srcs_inception  Created                                            0.1s 
- ⠋ Container mariadb       Creating                                           0.0s 
-Error response from daemon: failed to populate volume: error while mounting volume '/var/lib/docker/volumes/srcs_mariadb/_data': failed to mount local volume: mount /home/muhakose/data/mysql:/var/lib/docker/volumes/srcs_mariadb/_data, flags: 0x1000: no such file or directory
-make: *** [Makefile:10: up] Error 1
-
+mariadb  | Installing MariaDB/MySQL system tables in '/var/lib/mysql' ...
+mariadb  | OK
+mariadb  | 
+mariadb  | 
+mariadb  | To start mysqld at boot time you have to copy
+mariadb  | support-files/mysql.server to the right place for your system
+mariadb  | 
+mariadb  | 
+mariadb  | 
+mariadb  | 
+mariadb  | PLEASE REMEMBER TO SET A PASSWORD FOR THE MariaDB root USER !
+mariadb  | To do so, start the server, then issue the following command:
+mariadb  | 
+mariadb  | 
+mariadb  | '/usr/bin/mysql_secure_installation'
+mariadb  | 
+mariadb  | 
+mariadb  | which will also give you the option of removing the test
+mariadb  | databases and anonymous user created by default.  This is
+mariadb  | strongly recommended for production servers.
+mariadb  | 
+mariadb  | 
+mariadb  | See the MariaDB Knowledgebase at http://mariadb.com/kb
+mariadb  | 
+mariadb  | 
+mariadb  | You can start the MariaDB daemon with:
+mariadb  | cd '/usr' ; /usr/bin/mysqld_safe --datadir='/var/lib/mysql'
+mariadb  | 
+mariadb  | 
+mariadb  | You can test the MariaDB daemon with mysql-test-run.pl
+mariadb  | cd '/usr/mysql-test' ; perl mysql-test-run.pl
+mariadb  | 
+mariadb  | 
+mariadb  | Please report any problems at http://mariadb.org/jira
+mariadb  | 
+mariadb  | 
+mariadb  | The latest information about MariaDB is available at http://mariadb.org/.
+mariadb  | 
+mariadb  | 
+mariadb  | Consider joining MariaDB's strong and vibrant community:
+mariadb  | https://mariadb.org/get-involved/
+mariadb  | 
+mariadb  | 
+mariadb  | /usr/bin/mysql_install_db: 542: /usr/bin/mysql_install_db: cannot create /var/lib/mysql/mysql_upgrade_info: Permission denied
+mariadb  | 2024-06-14 14:17:21 0 [Note] Starting MariaDB 10.3.39-MariaDB-0+deb10u2 source revision ca001cf2048f0152689e1895e2dc15486dd0b1af as process 56
+mariadb  | 2024-06-14 14:17:21 0 [Note] InnoDB: Using Linux native AIO
+mariadb  | 2024-06-14 14:17:21 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+mariadb  | 2024-06-14 14:17:21 0 [Note] InnoDB: Uses event mutexes
+mariadb  | 2024-06-14 14:17:21 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+mariadb  | 2024-06-14 14:17:21 0 [Note] InnoDB: Number of pools: 1
+mariadb  | 2024-06-14 14:17:21 0 [Note] InnoDB: Using SSE2 crc32 instructions
+mariadb  | 2024-06-14 14:17:21 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+mariadb  | 2024-06-14 14:17:21 0 [Note] InnoDB: Completed initialization of buffer pool
+mariadb  | 2024-06-14 14:17:21 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+mariadb  | 2024-06-14 14:17:21 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+mariadb  | 2024-06-14 14:17:21 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+mariadb  | 2024-06-14 14:17:21 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+mariadb  | 2024-06-14 14:17:21 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+mariadb  | 2024-06-14 14:17:21 0 [Note] InnoDB: Waiting for purge to start
+mariadb  | 2024-06-14 14:17:21 0 [Note] InnoDB: 10.3.39 started; log sequence number 1625428; transaction id 20
+mariadb  | 2024-06-14 14:17:21 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+mariadb  | 2024-06-14 14:17:21 0 [Note] InnoDB: Buffer pool(s) load completed at 240614 14:17:21
+mariadb  | 2024-06-14 14:17:21 0 [Note] Plugin 'FEEDBACK' is disabled.
+mariadb  | 2024-06-14 14:17:21 0 [Note] Server socket created on IP: '0.0.0.0'.
+mariadb  | 2024-06-14 14:17:21 0 [Note] Reading of all Master_info entries succeeded
+mariadb  | 2024-06-14 14:17:21 0 [Note] Added new Master_info '' to hash table
+mariadb  | 2024-06-14 14:17:21 0 [Note] mysqld: ready for connections.
+mariadb  | Version: '10.3.39-MariaDB-0+deb10u2'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  Debian 10
+nginx    | rm: cannot remove '/etc/nginx/http.d/default.conf': No such file or directory
+nginx    | chmod: cannot access '/custom/default.conf': No such file or directory
+nginx    | cp: cannot stat '/custom/default.conf': No such file or directory
+nginx    | nginx: [emerg] invalid port in upstream "PHP_HOST:PHP_PORT" in /etc/nginx/sites-enabled/default.conf:18
+nginx    | rm: cannot remove '/etc/nginx/http.d/default.conf': No such file or directory
+nginx    | chmod: cannot access '/custom/default.conf': No such file or directory
+nginx    | cp: cannot stat '/custom/default.conf': No such file or directory
+nginx    | nginx: [emerg] invalid port in upstream "PHP_HOST:PHP_PORT" in /etc/nginx/sites-enabled/default.conf:18
+nginx    | rm: cannot remove '/etc/nginx/http.d/default.conf': No such file or directory
+nginx    | chmod: cannot access '/custom/default.conf': No such file or directory
+nginx    | cp: cannot stat '/custom/default.conf': No such file or directory
+nginx    | nginx: [emerg] invalid port in upstream "PHP_HOST:PHP_PORT" in /etc/nginx/sites-enabled/default.conf:18
+nginx    | rm: cannot remove '/etc/nginx/http.d/default.conf': No such file or directory
+nginx    | chmod: cannot access '/custom/default.conf': No such file or directory
+nginx    | cp: cannot stat '/custom/default.conf': No such file or directory
+nginx    | nginx: [emerg] invalid port in upstream "PHP_HOST:PHP_PORT" in /etc/nginx/sites-enabled/default.conf:18
+nginx    | rm: cannot remove '/etc/nginx/http.d/default.conf': No such file or directory
+nginx    | chmod: cannot access '/custom/default.conf': No such file or directory
+nginx    | cp: cannot stat '/custom/default.conf': No such file or directory
+nginx    | nginx: [emerg] invalid port in upstream "PHP_HOST:PHP_PORT" in /etc/nginx/sites-enabled/default.conf:18
+nginx    | rm: cannot remove '/etc/nginx/http.d/default.conf': No such file or directory
+nginx    | chmod: cannot access '/custom/default.conf': No such file or directory
+nginx    | cp: cannot stat '/custom/default.conf': No such file or directory
+nginx    | nginx: [emerg] invalid port in upstream "PHP_HOST:PHP_PORT" in /etc/nginx/sites-enabled/default.conf:18
+nginx    | rm: cannot remove '/etc/nginx/http.d/default.conf': No such file or directory
+nginx    | chmod: cannot access '/custom/default.conf': No such file or directory
+nginx    | cp: cannot stat '/custom/default.conf': No such file or directory
+nginx    | nginx: [emerg] invalid port in upstream "PHP_HOST:PHP_PORT" in /etc/nginx/sites-enabled/default.conf:18
+nginx    | rm: cannot remove '/etc/nginx/http.d/default.conf': No such file or directory
+nginx    | chmod: cannot access '/custom/default.conf': No such file or directory
+nginx    | cp: cannot stat '/custom/default.conf': No such file or directory
+nginx    | nginx: [emerg] invalid port in upstream "PHP_HOST:PHP_PORT" in /etc/nginx/sites-enabled/default.conf:18
+nginx    | rm: cannot remove '/etc/nginx/http.d/default.conf': No such file or directory
+nginx    | chmod: cannot access '/custom/default.conf': No such file or directory
+nginx    | cp: cannot stat '/custom/default.conf': No such file or directory
+nginx    | nginx: [emerg] invalid port in upstream "PHP_HOST:PHP_PORT" in /etc/nginx/sites-enabled/default.conf:18
+nginx    | rm: cannot remove '/etc/nginx/http.d/default.conf': No such file or directory
+nginx    | chmod: cannot access '/custom/default.conf': No such file or directory
+nginx    | cp: cannot stat '/custom/default.conf': No such file or directory
+nginx    | nginx: [emerg] invalid port in upstream "PHP_HOST:PHP_PORT" in /etc/nginx/sites-enabled/default.conf:18
+nginx    | rm: cannot remove '/etc/nginx/http.d/default.conf': No such file or directory
+nginx    | chmod: cannot access '/custom/default.conf': No such file or directory
+nginx    | cp: cannot stat '/custom/default.conf': No such file or directory
+nginx    | nginx: [emerg] invalid port in upstream "PHP_HOST:PHP_PORT" in /etc/nginx/sites-enabled/default.conf:18
+nginx    | rm: cannot remove '/etc/nginx/http.d/default.conf': No such file or directory
+nginx    | chmod: cannot access '/custom/default.conf': No such file or directory
+nginx    | cp: cannot stat '/custom/default.conf': No such file or directory
+nginx    | nginx: [emerg] invalid port in upstream "PHP_HOST:PHP_PORT" in /etc/nginx/sites-enabled/default.conf:18
+wordpress  | --2024-06-14 14:17:19--  https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+wordpress  | Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.109.133, 185.199.108.133, 185.199.110.133, ...
+wordpress  | Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.109.133|:443... connected.
+wordpress  | HTTP request sent, awaiting response... 200 OK
+wordpress  | Length: 6995229 (6.7M) [application/octet-stream]
+wordpress  | Saving to: 'wp-cli.phar'
+wordpress  | 
+wordpress  | 
+wordpress  |      0K .......... .......... .......... .......... ..........  0% 7.59M 1s
+wordpress  |     50K .......... .......... .......... .......... ..........  1% 10.2M 1s
+wordpress  |    100K .......... .......... .......... .......... ..........  2% 37.9M 1s
+wordpress  |    150K .......... .......... .......... .......... ..........  2% 40.2M 0s
+wordpress  |    200K .......... .......... .......... .......... ..........  3% 10.9M 0s
+wordpress  |    250K .......... .......... .......... .......... ..........  4% 33.6M 0s
+wordpress  |    300K .......... .......... .......... .......... ..........  5%  391M 0s
+wordpress  |    350K .......... .......... .......... .......... ..........  5% 15.2M 0s
+wordpress  |    400K .......... .......... .......... .......... ..........  6%  140M 0s
+wordpress  |    450K .......... .......... .......... .......... ..........  7% 28.2M 0s
+wordpress  |    500K .......... .......... .......... .......... ..........  8% 17.4M 0s
+wordpress  |    550K .......... .......... .......... .......... ..........  8% 59.4M 0s
+wordpress  |    600K .......... .......... .......... .......... ..........  9%  183M 0s
+wordpress  |    650K .......... .......... .......... .......... .......... 10% 25.3M 0s
+wordpress  |    700K .......... .......... .......... .......... .......... 10% 17.6M 0s
+wordpress  |    750K .......... .......... .......... .......... .......... 11% 96.8M 0s
+wordpress  |    800K .......... .......... .......... .......... .......... 12% 40.8M 0s
+wordpress  |    850K .......... .......... .......... .......... .......... 13%  164M 0s
+wordpress  |    900K .......... .......... .......... .......... .......... 13%  404M 0s
+wordpress  |    950K .......... .......... .......... .......... .......... 14% 55.9M 0s
+wordpress  |   1000K .......... .......... .......... .......... .......... 15% 1.56M 0s
+wordpress  |   1050K .......... .......... .......... .......... .......... 16% 83.7M 0s
+wordpress  |   1100K .......... .......... .......... .......... .......... 16% 81.0M 0s
+wordpress  |   1150K .......... .......... .......... .......... .......... 17% 26.3M 0s
+wordpress  |   1200K .......... .......... .......... .......... .......... 18% 3.44M 0s
+wordpress  |   1250K .......... .......... .......... .......... .......... 19% 7.73M 0s
+wordpress  |   1300K .......... .......... .......... .......... .......... 19%  356M 0s
+wordpress  |   1350K .......... .......... .......... .......... .......... 20%  367M 0s
+wordpress  |   1400K .......... .......... .......... .......... .......... 21%  357M 0s
+wordpress  |   1450K .......... .......... .......... .......... .......... 21%  412M 0s
+wordpress  |   1500K .......... .......... .......... .......... .......... 22%  401M 0s
+wordpress  |   1550K .......... .......... .......... .......... .......... 23%  412M 0s
+wordpress  |   1600K .......... .......... .......... .......... .......... 24%  321M 0s
+wordpress  |   1650K .......... .......... .......... .......... .......... 24%  398M 0s
+wordpress  |   1700K .......... .......... .......... .......... .......... 25%  127M 0s
+wordpress  |   1750K .......... .......... .......... .......... .......... 26%  122M 0s
+wordpress  |   1800K .......... .......... .......... .......... .......... 27% 5.55M 0s
+wordpress  |   1850K .......... .......... .......... .......... .......... 27%  107M 0s
+wordpress  |   1900K .......... .......... .......... .......... .......... 28%  290M 0s
+wordpress  |   1950K .......... .......... .......... .......... .......... 29%  403M 0s
+wordpress  |   2000K .......... .......... .......... .......... .......... 30%  206M 0s
+wordpress  |   2050K .......... .......... .......... .......... .......... 30%  410M 0s
+wordpress  |   2100K .......... .......... .......... .......... .......... 31%  270M 0s
+wordpress  |   2150K .......... .......... .......... .......... .......... 32%  327M 0s
+wordpress  |   2200K .......... .......... .......... .......... .......... 32% 71.1M 0s
+wordpress  |   2250K .......... .......... .......... .......... .......... 33% 90.2M 0s
+wordpress  |   2300K .......... .......... .......... .......... .......... 34% 98.3M 0s
+wordpress  |   2350K .......... .......... .......... .......... .......... 35%  124M 0s
+wordpress  |   2400K .......... .......... .......... .......... .......... 35% 87.4M 0s
+wordpress  |   2450K .......... .......... .......... .......... .......... 36%  102M 0s
+wordpress  |   2500K .......... .......... .......... .......... .......... 37% 3.69M 0s
+wordpress  |   2550K .......... .......... .......... .......... .......... 38% 80.8M 0s
+wordpress  |   2600K .......... .......... .......... .......... .......... 38%  151M 0s
+wordpress  |   2650K .......... .......... .......... .......... .......... 39%  395M 0s
+wordpress  |   2700K .......... .......... .......... .......... .......... 40%  415M 0s
+wordpress  |   2750K .......... .......... .......... .......... .......... 40%  419M 0s
+wordpress  |   2800K .......... .......... .......... .......... .......... 41%  338M 0s
+wordpress  |   2850K .......... .......... .......... .......... .......... 42%  411M 0s
+wordpress  |   2900K .......... .......... .......... .......... .......... 43%  393M 0s
+wordpress  |   2950K .......... .......... .......... .......... .......... 43%  407M 0s
+wordpress  |   3000K .......... .......... .......... .......... .......... 44%  128M 0s
+wordpress  |   3050K .......... .......... .......... .......... .......... 45% 64.7M 0s
+wordpress  |   3100K .......... .......... .......... .......... .......... 46% 3.37M 0s
+wordpress  |   3150K .......... .......... .......... .......... .......... 46% 91.2M 0s
+wordpress  |   3200K .......... .......... .......... .......... .......... 47%  105M 0s
+wordpress  |   3250K .......... .......... .......... .......... .......... 48% 80.2M 0s
+wordpress  |   3300K .......... .......... .......... .......... .......... 49% 11.4M 0s
+wordpress  |   3350K .......... .......... .......... .......... .......... 49% 80.4M 0s
+wordpress  |   3400K .......... .......... .......... .......... .......... 50% 96.2M 0s
+wordpress  |   3450K .......... .......... .......... .......... .......... 51%  131M 0s
+wordpress  |   3500K .......... .......... .......... .......... .......... 51%  139M 0s
+wordpress  |   3550K .......... .......... .......... .......... .......... 52% 50.4M 0s
+wordpress  |   3600K .......... .......... .......... .......... .......... 53% 79.5M 0s
+wordpress  |   3650K .......... .......... .......... .......... .......... 54%  265M 0s
+wordpress  |   3700K .......... .......... .......... .......... .......... 54%  382M 0s
+wordpress  |   3750K .......... .......... .......... .......... .......... 55% 3.91M 0s
+wordpress  |   3800K .......... .......... .......... .......... .......... 56% 16.7M 0s
+wordpress  |   3850K .......... .......... .......... .......... .......... 57% 74.8M 0s
+wordpress  |   3900K .......... .......... .......... .......... .......... 57%  166M 0s
+wordpress  |   3950K .......... .......... .......... .......... .......... 58%  322M 0s
+wordpress  |   4000K .......... .......... .......... .......... .......... 59%  388M 0s
+wordpress  |   4050K .......... .......... .......... .......... .......... 60%  388M 0s
+wordpress  |   4100K .......... .......... .......... .......... .......... 60%  375M 0s
+wordpress  |   4150K .......... .......... .......... .......... .......... 61%  357M 0s
+wordpress  |   4200K .......... .......... .......... .......... .......... 62%  387M 0s
+wordpress  |   4250K .......... .......... .......... .......... .......... 62%  212M 0s
+wordpress  |   4300K .......... .......... .......... .......... .......... 63% 79.2M 0s
+wordpress  |   4350K .......... .......... .......... .......... .......... 64% 57.5M 0s
+wordpress  |   4400K .......... .......... .......... .......... .......... 65% 59.4M 0s
+wordpress  |   4450K .......... .......... .......... .......... .......... 65% 4.96M 0s
+wordpress  |   4500K .......... .......... .......... .......... .......... 66%  116M 0s
+wordpress  |   4550K .......... .......... .......... .......... .......... 67%  140M 0s
+wordpress  |   4600K .......... .......... .......... .......... .......... 68% 71.1M 0s
+wordpress  |   4650K .......... .......... .......... .......... .......... 68%  110M 0s
+wordpress  |   4700K .......... .......... .......... .......... .......... 69% 6.03M 0s
+wordpress  |   4750K .......... .......... .......... .......... .......... 70% 29.0M 0s
+wordpress  |   4800K .......... .......... .......... .......... .......... 70%  109M 0s
+wordpress  |   4850K .......... .......... .......... .......... .......... 71%  336M 0s
+wordpress  |   4900K .......... .......... .......... .......... .......... 72%  389M 0s
+wordpress  |   4950K .......... .......... .......... .......... .......... 73%  384M 0s
+wordpress  |   5000K .......... .......... .......... .......... .......... 73%  396M 0s
+wordpress  |   5050K .......... .......... .......... .......... .......... 74%  320M 0s
+wordpress  |   5100K .......... .......... .......... .......... .......... 75%  391M 0s
+wordpress  |   5150K .......... .......... .......... .......... .......... 76%  395M 0s
+wordpress  |   5200K .......... .......... .......... .......... .......... 76%  402M 0s
+wordpress  |   5250K .......... .......... .......... .......... .......... 77%  353M 0s
+wordpress  |   5300K .......... .......... .......... .......... .......... 78%  390M 0s
+wordpress  |   5350K .......... .......... .......... .......... .......... 79%  330M 0s
+wordpress  |   5400K .......... .......... .......... .......... .......... 79%  393M 0s
+wordpress  |   5450K .......... .......... .......... .......... .......... 80%  397M 0s
+wordpress  |   5500K .......... .......... .......... .......... .......... 81%  400M 0s
+wordpress  |   5550K .......... .......... .......... .......... .......... 81%  346M 0s
+wordpress  |   5600K .......... .......... .......... .......... .......... 82%  397M 0s
+wordpress  |   5650K .......... .......... .......... .......... .......... 83%  396M 0s
+wordpress  |   5700K .......... .......... .......... .......... .......... 84%  397M 0s
+wordpress  |   5750K .......... .......... .......... .......... .......... 84%  328M 0s
+wordpress  |   5800K .......... .......... .......... .......... .......... 85%  380M 0s
+wordpress  |   5850K .......... .......... .......... .......... .......... 86%  399M 0s
+wordpress  |   5900K .......... .......... .......... .......... .......... 87%  403M 0s
+wordpress  |   5950K .......... .......... .......... .......... .......... 87%  363M 0s
+wordpress  |   6000K .......... .......... .......... .......... .......... 88%  391M 0s
+wordpress  |   6050K .......... .......... .......... .......... .......... 89%  398M 0s
+wordpress  |   6100K .......... .......... .......... .......... .......... 90%  382M 0s
+wordpress  |   6150K .......... .......... .......... .......... .......... 90%  329M 0s
+wordpress  |   6200K .......... .......... .......... .......... .......... 91%  401M 0s
+wordpress  |   6250K .......... .......... .......... .......... .......... 92%  388M 0s
+wordpress  |   6300K .......... .......... .......... .......... .......... 92%  342M 0s
+wordpress  |   6350K .......... .......... .......... .......... .......... 93%  396M 0s
+wordpress  |   6400K .......... .......... .......... .......... .......... 94%  389M 0s
+wordpress  |   6450K .......... .......... .......... .......... .......... 95%  394M 0s
+wordpress  |   6500K .......... .......... .......... .......... .......... 95%  333M 0s
+wordpress  |   6550K .......... .......... .......... .......... .......... 96%  392M 0s
+wordpress  |   6600K .......... .......... .......... .......... .......... 97%  385M 0s
+wordpress  |   6650K .......... .......... .......... .......... .......... 98%  400M 0s
+wordpress  |   6700K .......... .......... .......... .......... .......... 98%  361M 0s
+wordpress  |   6750K .......... .......... .......... .......... .......... 99%  402M 0s
+wordpress  |   6800K .......... .......... .......... .                    100%  241M=0.2s
+wordpress  | 
+wordpress  | 
+wordpress  | 2024-06-14 14:17:20 (34.4 MB/s) - 'wp-cli.phar' saved [6995229/6995229]
+wordpress  | 
+wordpress  | 
+wordpress  | Downloading WordPress 6.5.4 (en_US)...
+wordpress  | md5 hash verified: 6448a01d6796d7bc4ba99e80c8533644
+wordpress  | Success: WordPress downloaded.
+wordpress  | PHP Warning:  file_get_contents(phar://wp-cli.phar/vendor/wp-cli/wp-cli/templates/phar://usr/local/bin/wp/vendor/wp-cli/config-command/templates/wp-config.mustache): failed to open stream: phar error: "vendor/wp-cli/wp-cli/templates/phar:/usr/local/bin/wp/vendor/wp-cli/config-command/templates/wp-config.mustache" is not a file in phar "wp-cli.phar" in phar:///usr/local/bin/wp/vendor/wp-cli/wp-cli/php/utils.php on line 608
+wordpress  | Error: Could not create new 'wp-config.php' file.
+wordpress  | Error: Strange wp-config.php file: wp-settings.php is not loaded directly.
+wordpress  | Error: Strange wp-config.php file: wp-settings.php is not loaded directly.
+wordpress  | Error: Strange wp-config.php file: wp-settings.php is not loaded directly.
