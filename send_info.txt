@@ -1,15 +1,3 @@
-mariadb  | Database already exists.
-mariadb  | 240614 14:41:50 mysqld_safe Logging to '/var/lib/mysql/205bfd9237a7.err'.
-mariadb  | /usr/bin/mysqld_safe_helper: Can't create/write to file '/var/lib/mysql/205bfd9237a7.err' (Errcode: 13 "Permission denied")
-mariadb  | 240614 14:41:50 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
-nginx    | nginx: [emerg] BIO_new_file("/etc/nginx/ssl/nginx-selfsigned.crt") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/ssl/nginx-selfsigned.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
-nginx    | nginx: [emerg] BIO_new_file("/etc/nginx/ssl/nginx-selfsigned.crt") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/ssl/nginx-selfsigned.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
-nginx    | nginx: [emerg] BIO_new_file("/etc/nginx/ssl/nginx-selfsigned.crt") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/ssl/nginx-selfsigned.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
-nginx    | nginx: [emerg] BIO_new_file("/etc/nginx/ssl/nginx-selfsigned.crt") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/ssl/nginx-selfsigned.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
-nginx    | nginx: [emerg] BIO_new_file("/etc/nginx/ssl/nginx-selfsigned.crt") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/ssl/nginx-selfsigned.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
-nginx    | nginx: [emerg] BIO_new_file("/etc/nginx/ssl/nginx-selfsigned.crt") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/ssl/nginx-selfsigned.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
-nginx    | nginx: [emerg] BIO_new_file("/etc/nginx/ssl/nginx-selfsigned.crt") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/ssl/nginx-selfsigned.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
-nginx    | nginx: [emerg] BIO_new_file("/etc/nginx/ssl/nginx-selfsigned.crt") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/ssl/nginx-selfsigned.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
 wordpress  | --2024-06-14 14:41:51--  https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 wordpress  | Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.109.133, 185.199.111.133, 185.199.110.133, ...
 wordpress  | Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.109.133|:443... connected.
@@ -165,3 +153,16 @@ wordpress  | Error: The 'wp-config.php' file already exists.
 wordpress  | Error: Strange wp-config.php file: wp-settings.php is not loaded directly.
 wordpress  | Error: Strange wp-config.php file: wp-settings.php is not loaded directly.
 wordpress  | Error: Strange wp-config.php file: wp-settings.php is not loaded directly.
+mariadb    | Database already exists.
+mariadb    | 240614 14:41:50 mysqld_safe Logging to '/var/lib/mysql/205bfd9237a7.err'.
+mariadb    | /usr/bin/mysqld_safe_helper: Can't create/write to file '/var/lib/mysql/205bfd9237a7.err' (Errcode: 13 "Permission denied")
+mariadb    | 240614 14:41:50 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+nginx      | nginx: [emerg] BIO_new_file("/etc/nginx/ssl/nginx-selfsigned.crt") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/ssl/nginx-selfsigned.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+nginx      | nginx: [emerg] BIO_new_file("/etc/nginx/ssl/nginx-selfsigned.crt") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/ssl/nginx-selfsigned.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+nginx      | nginx: [emerg] BIO_new_file("/etc/nginx/ssl/nginx-selfsigned.crt") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/ssl/nginx-selfsigned.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+nginx      | nginx: [emerg] BIO_new_file("/etc/nginx/ssl/nginx-selfsigned.crt") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/ssl/nginx-selfsigned.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+nginx      | nginx: [emerg] BIO_new_file("/etc/nginx/ssl/nginx-selfsigned.crt") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/ssl/nginx-selfsigned.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+nginx      | nginx: [emerg] BIO_new_file("/etc/nginx/ssl/nginx-selfsigned.crt") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/ssl/nginx-selfsigned.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+nginx      | nginx: [emerg] BIO_new_file("/etc/nginx/ssl/nginx-selfsigned.crt") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/ssl/nginx-selfsigned.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+nginx      | nginx: [emerg] BIO_new_file("/etc/nginx/ssl/nginx-selfsigned.crt") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/ssl/nginx-selfsigned.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+nginx      | nginx: [emerg] BIO_new_file("/etc/nginx/ssl/nginx-selfsigned.crt") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/ssl/nginx-selfsigned.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
