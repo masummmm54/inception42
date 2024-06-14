@@ -2,4 +2,4 @@ CONTAINER ID   IMAGE              COMMAND                  CREATED              
 0efcf4ea9c50   srcs_wordpress     "docker-entrypoint.s…"   About a minute ago   Up About a minute   9000/tcp                                srcs_wordpress_1
 be2458ec88f9   srcs_mariadb       "docker-entrypoint.s…"   About a minute ago   Up About a minute   3306/tcp                                srcs_mariadb_1
 a05dfab6edc6   wordpress:latest   "docker-entrypoint.s…"   33 minutes ago       Up 3 minutes        0.0.0.0:8000->80/tcp, :::8000->80/tcp   wordpress_site_wordpress_1
-d70ca214e7ea   mysql:5.7          "docker-entrypoint.s…"   33 minutes ago       Up 3 minutes        3306/tcp, 33060/tcp                     wordpress_site_db_1
+d70ca214e7   ea   mysql:5.7          "docker-entrypoint.s…"   33 minutes ago       Up 3 minutes        3306/tcp, 33060/tcp                     wordpress_site_db_1
