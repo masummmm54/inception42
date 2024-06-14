@@ -1,6 +1,8 @@
-sudo chown -R 999:999 /home/masum/data/mysql
-sudo chmod -R 755 /home/masum/data/mysql
 
-mkdir -p /etc/nginx/ssl
-openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/nginx/ssl/nginx-selfsigned.key -out /etc/nginx/ssl/nginx-selfsigned.crt -subj "/CN=muhakose.42.fr"
 
+mkdir -p srcs/requirements/nginx/conf/ssl
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout srcs/requirements/nginx/conf/ssl/nginx-selfsigned.key -out srcs/requirements/nginx/conf/ssl/nginx-selfsigned.crt -subj "/CN=localhost"
+
+
+sudo chown -R $(whoami):$(whoami) /home/masum/data/mysql /home/masum/data/html
+chmod -R 755 /home/masum/data/mysql /home/masum/data/html
