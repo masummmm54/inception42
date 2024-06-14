@@ -13,9 +13,7 @@ down:
 	docker-compose -f srcs/docker-compose.yml down
 
 logs:
-	docker-compose -f srcs/docker-compose.yml logs wordpress
-	docker-compose -f srcs/docker-compose.yml logs mariadb
-	docker-compose -f srcs/docker-compose.yml logs nginx
+	docker-compose -f srcs/docker-compose.yml logs
 
 clean: down
 	docker-compose -f srcs/docker-compose.yml rm -f
