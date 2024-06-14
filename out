@@ -1,23 +1,18 @@
-docker-compose -f srcs/docker-compose.yml logs wordpress
-wordpress  | WordPress not found in /var/www/html - copying now...
-wordpress  | Complete! WordPress has been successfully copied to /var/www/html
-wordpress  | No 'wp-config.php' found in /var/www/html, but 'WORDPRESS_...' variables supplied; copying 'wp-config-docker.php' (WORDPRESS_DB_HOST WORDPRESS_DB_NAME WORDPRESS_DB_PASSWORD WORDPRESS_DB_USER)
-wordpress  | [14-Jun-2024 16:15:59] NOTICE: fpm is running, pid 1
-wordpress  | [14-Jun-2024 16:15:59] NOTICE: ready to handle connections
-docker-compose -f srcs/docker-compose.yml logs mariadb
-mariadb  | Database already exists.
-mariadb  | 240614 16:15:57 mysqld_safe Logging to '/var/lib/mysql/87c99adfd2ad.err'.
-mariadb  | 240614 16:15:58 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
-mariadb  | /usr/bin/mysqld_safe_helper: Can't create/write to file '/var/lib/mysql/87c99adfd2ad.err' (Errcode: 13 "Permission denied")
-docker-compose -f srcs/docker-compose.yml logs nginx
-nginx  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
-nginx  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
-nginx  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
-nginx  | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
-nginx  | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
-nginx  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
-nginx  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
-nginx  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
-nginx  | /docker-entrypoint.sh: Configuration complete; ready for start up
-nginx  | 2024/06/14 16:15:58 [emerg] 1#1: "server" directive is not allowed here in /etc/nginx/nginx.conf:1
-nginx  | nginx: [emerg] "server" directive is not allowed here in /etc/nginx/nginx.conf:1
+docker-compose -f srcs/docker-compose.yml logs
+wordpress  | [14-Jun-2024 16:24:50] NOTICE: fpm is running, pid 1
+wordpress  | [14-Jun-2024 16:24:50] NOTICE: ready to handle connections
+nginx      | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx      | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx      | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx      | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+nginx      | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+nginx      | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+nginx      | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx      | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx      | /docker-entrypoint.sh: Configuration complete; ready for start up
+nginx      | 2024/06/14 16:24:50 [emerg] 1#1: cannot load certificate "/etc/ssl/certs/ssl-cert-snakeoil.pem": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/ssl/certs/ssl-cert-snakeoil.pem, r) error:10000080:BIO routines::no such file)
+nginx      | nginx: [emerg] cannot load certificate "/etc/ssl/certs/ssl-cert-snakeoil.pem": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/ssl/certs/ssl-cert-snakeoil.pem, r) error:10000080:BIO routines::no such file)
+mariadb    | Database already exists.
+mariadb    | 240614 16:24:50 mysqld_safe Logging to '/var/lib/mysql/6d8dc0e8c5c7.err'.
+mariadb    | 240614 16:24:50 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+mariadb    | /usr/bin/mysqld_safe_helper: Can't create/write to file '/var/lib/mysql/6d8dc0e8c5c7.err' (Errcode: 13 "Permission denied")
