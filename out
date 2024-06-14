@@ -1,0 +1,15 @@
+docker-compose -f srcs/docker-compose.yml logs wordpress
+wordpress  | WordPress already configured.
+docker-compose -f srcs/docker-compose.yml logs mariadb
+mariadb  | Database already exists.
+mariadb  | 240614 15:40:59 mysqld_safe Logging to '/var/lib/mysql/5c2326aa308e.err'.
+mariadb  | /usr/bin/mysqld_safe_helper: Can't create/write to file '/var/lib/mysql/5c2326aa308e.err' (Errcode: 13 "Permission denied")
+mariadb  | 240614 15:40:59 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+docker-compose -f srcs/docker-compose.yml logs nginx
+nginx  | nginx: [emerg] BIO_new_file("/etc/nginx/ssl/nginx-selfsigned.crt") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/ssl/nginx-selfsigned.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+nginx  | nginx: [emerg] BIO_new_file("/etc/nginx/ssl/nginx-selfsigned.crt") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/ssl/nginx-selfsigned.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+nginx  | nginx: [emerg] BIO_new_file("/etc/nginx/ssl/nginx-selfsigned.crt") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/ssl/nginx-selfsigned.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+nginx  | nginx: [emerg] BIO_new_file("/etc/nginx/ssl/nginx-selfsigned.crt") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/ssl/nginx-selfsigned.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+nginx  | nginx: [emerg] BIO_new_file("/etc/nginx/ssl/nginx-selfsigned.crt") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/ssl/nginx-selfsigned.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+nginx  | nginx: [emerg] BIO_new_file("/etc/nginx/ssl/nginx-selfsigned.crt") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/ssl/nginx-selfsigned.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+nginx  | nginx: [emerg] BIO_new_file("/etc/nginx/ssl/nginx-selfsigned.crt") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/ssl/nginx-selfsigned.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
