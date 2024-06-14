@@ -1,6 +1,10 @@
 docker-compose -f srcs/docker-compose.yml logs
-wordpress  | [14-Jun-2024 16:24:50] NOTICE: fpm is running, pid 1
-wordpress  | [14-Jun-2024 16:24:50] NOTICE: ready to handle connections
+mariadb  | Database already exists.
+mariadb  | 240614 16:26:32 mysqld_safe Logging to '/var/lib/mysql/7bf883f6d55c.err'.
+mariadb  | 240614 16:26:32 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+mariadb  | /usr/bin/mysqld_safe_helper: Can't create/write to file '/var/lib/mysql/7bf883f6d55c.err' (Errcode: 13 "Permission denied")
+wordpress  | [14-Jun-2024 16:26:32] NOTICE: fpm is running, pid 1
+wordpress  | [14-Jun-2024 16:26:32] NOTICE: ready to handle connections
 nginx      | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
 nginx      | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
 nginx      | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
@@ -10,9 +14,5 @@ nginx      | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resol
 nginx      | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
 nginx      | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
 nginx      | /docker-entrypoint.sh: Configuration complete; ready for start up
-nginx      | 2024/06/14 16:24:50 [emerg] 1#1: cannot load certificate "/etc/ssl/certs/ssl-cert-snakeoil.pem": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/ssl/certs/ssl-cert-snakeoil.pem, r) error:10000080:BIO routines::no such file)
+nginx      | 2024/06/14 16:26:32 [emerg] 1#1: cannot load certificate "/etc/ssl/certs/ssl-cert-snakeoil.pem": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/ssl/certs/ssl-cert-snakeoil.pem, r) error:10000080:BIO routines::no such file)
 nginx      | nginx: [emerg] cannot load certificate "/etc/ssl/certs/ssl-cert-snakeoil.pem": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/ssl/certs/ssl-cert-snakeoil.pem, r) error:10000080:BIO routines::no such file)
-mariadb    | Database already exists.
-mariadb    | 240614 16:24:50 mysqld_safe Logging to '/var/lib/mysql/6d8dc0e8c5c7.err'.
-mariadb    | 240614 16:24:50 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
-mariadb    | /usr/bin/mysqld_safe_helper: Can't create/write to file '/var/lib/mysql/6d8dc0e8c5c7.err' (Errcode: 13 "Permission denied")
