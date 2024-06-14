@@ -1,22 +1,8 @@
-# requirements/mariadb/Dockerfile
-FROM debian:buster
+FROM mariadb:latest
 
-RUN apt-get update -yq && \
-    apt-get upgrade -y && \
-    apt-get install mariadb-server mariadb-client -y && \
-    mkdir -p /var/run/mysqld && \
-    chown -R mysql:mysql /var/run/mysqld && \
-    chown -R mysql:mysql /etc/mysql/ && \
-    chown -R mysql:mysql /var/lib/mysql
+ENV MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+ENV MYSQL_DATABASE=${MYSQL_DATABASE}
+ENV MYSQL_USER=${MYSQL_USER}
+ENV MYSQL_PASSWORD=${MYSQL_PASSWORD}
 
-COPY ./tools/run.sh /tmp/
-COPY ./conf/init.sql /tmp/
-COPY ./conf/my.cnf /etc/mysql
-
-RUN chown -R mysql:mysql /tmp/ && \
-    chown -R mysql:mysql /etc/mysql && \
-    chown -R mysql:mysql /var/lib/mysql
-
-USER mysql
-
-ENTRYPOINT ["sh", "/tmp/run.sh"]
+EXPOSE 3306
