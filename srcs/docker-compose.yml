@@ -1,50 +1,57 @@
-version: '3.8'
+version: '3'
 
 services:
-  nginx:
-    build:
-      context: ./requirements/nginx
-    ports:
-      - "443:443"
-    volumes:
-      - ./requirements/nginx/conf:/etc/nginx/conf.d
-      - /home/masum/data/nginx:/var/log/nginx
-    environment:
-      DOMAIN_NAME: ${DOMAIN_NAME}
-    depends_on:
-      - wordpress
-    networks:
-      - mynetwork
+        mariadb:
+                build: requirements/mariadb
+                image: mariadb
+                container_name: mariadb
+                env_file: .env
+                volumes:
+                        - mariadb:/var/lib/mysql
+                restart: on-failure
+                networks:
+                        - inception
 
-  mariadb:
-    build:
-      context: ./requirements/mariadb
-    volumes:
-      - /home/masum/data/mariadb:/var/lib/mysql
-    environment:
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
-      MYSQL_USER: ${MYSQL_USER}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-    networks:
-      - mynetwork
+        wordpress:
+                build: requirements/wordpress
+                image: wordpress
+                depends_on:
+                        - mariadb
+                container_name: wordpress
+                env_file: .env
+                volumes:
+                        - wordpress:/var/www/wordpress
+                restart: on-failure
+                networks:
+                        - inception
 
-  wordpress:
-    build:
-      context: ./requirements/wordpress
-    volumes:
-      - /home/yourlogin/data/wordpress:/var/www/html
-    environment:
-      WORDPRESS_DB_HOST: ${WORDPRESS_DB_HOST}
-      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME}
-      WORDPRESS_DB_USER: ${WORDPRESS_DB_USER}
-      WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD}
-    depends_on:
-      - mariadb
-    networks:
-      - mynetwork
+        nginx:
+                build: requirements/nginx
+                image: nginx
+                depends_on:
+                        - wordpress
+                container_name: nginx
+                env_file: .env
+                volumes:
+                        - wordpress:/var/www/wordpress
+                ports:
+                        - "443:443"
+                restart: on-failure
+                networks:
+                        - inception
 
 networks:
-  mynetwork:
-    driver: bridge
+        inception:
+                driver: bridge
 
+volumes:
+        mariadb:
+                driver_opts:
+                        type: none
+                        device: /home/muhakose/data/mysql
+                        o: bind
+        wordpress:
+                driver_opts:
+                        type: none
+                        device: /home/muhakose/data/html
+                        o: bind
