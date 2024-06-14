@@ -1,8 +1,10 @@
+docker run --rm -it mariadb:latest sh -c 'id mysql'
 
+sudo chown -R 999:999 /home/your_login/data/mariadb
 
-mkdir -p srcs/requirements/nginx/conf/ssl
-openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout srcs/requirements/nginx/conf/ssl/nginx-selfsigned.key -out srcs/requirements/nginx/conf/ssl/nginx-selfsigned.crt -subj "/CN=localhost"
+sudo mkdir -p /etc/ssl/certs /etc/ssl/private
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/ssl-cert-snakeoil.key -out /etc/ssl/certs/ssl-cert-snakeoil.pem -subj "/CN=your_login.42.fr"
 
-
-sudo chown -R $(whoami):$(whoami) /home/masum/data/mysql /home/masum/data/html
-chmod -R 755 /home/masum/data/mysql /home/masum/data/html
+mkdir -p srcs/requirements/nginx/certs
+cp /etc/ssl/certs/ssl-cert-snakeoil.pem srcs/requirements/nginx/certs/
+cp /etc/ssl/private/ssl-cert-snakeoil.key srcs/requirements/nginx/certs/
