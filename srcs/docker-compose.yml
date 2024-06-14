@@ -48,10 +48,10 @@ volumes:
         mariadb:
                 driver_opts:
                         type: none
-                        device: /home/muhakose/data/mysql
+                        device: /home/masum/data/mysql
                         o: bind
         wordpress:
                 driver_opts:
                         type: none
-                        device: /home/muhakose/data/html
+                        device: /home/masum/data/html
                         o: bind
