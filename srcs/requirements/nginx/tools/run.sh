@@ -1,8 +1,5 @@
 #!/bin/sh
 
-# Remove default configuration if it exists
-rm -f /etc/nginx/http.d/default.conf
-
 # Substitute environment variables in the Nginx configuration
 sed -i 's|DOMAIN_NAME|'${DOMAIN_NAME}'|g' /etc/nginx/sites-available/default.conf
 sed -i 's|WP_PATH|'${WP_PATH}'|g' /etc/nginx/sites-available/default.conf
