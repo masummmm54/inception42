@@ -2,11 +2,10 @@ version: '3.7'
 
 services:
   mariadb:
+    name: mariadb
     build:
       context: requirements/mariadb
       dockerfile: Dockerfile
-    image: mariadb
-    container_name: mariadb
     volumes:
       - db_data:/var/lib/mysql
     restart: always
@@ -16,14 +15,13 @@ services:
       - wpsite
 
   wordpress:
+    name: wordpress
     depends_on:
       - mariadb
     build:
       context: requirements/wordpress
       dockerfile: Dockerfile
       image: wordpress
-    container_name: wordpress
-    restart: always
     volumes:
       - wp_data:/var/www/html
     env_file:
@@ -37,13 +35,12 @@ services:
       - wpsite
 
   nginx:
+    name: nginx
     depends_on:
       - wordpress
     build:
       context: requirements/nginx
       dockerfile: Dockerfile
-    image: nginx
-    container_name: nginx
     volumes:
       - wp_data:/var/www/html
     ports:
