@@ -1,9 +1,15 @@
 FROM wordpress:5.7.2-fpm-alpine
 
-RUN apk add --no-cache \
-	php7-mysqli \
-	php7-mbstring \
-	php7-json \
-	php7-session
+RUN apt update -y
+
+RUN apt install php-fpm php-mysql -y
+
+RUN apt install curl -y
+
+COPY ./tools/script.sh /
+
+COPY ./tools/wp-config.php /
 
 EXPOSE 80
+
+CMD [ "/script.sh" ]
