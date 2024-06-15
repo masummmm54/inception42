@@ -2,11 +2,9 @@ FROM wordpress:5.7.2-fpm-alpine
 
 RUN apk update && apk add --no-cache
 
-RUN apt update -y
+RUN apk install php-fpm php-mysql -y
 
-RUN apt install php-fpm php-mysql -y
-
-RUN apt install curl -y
+RUN apk install curl -y
 
 COPY ./tools/script.sh /script.sh
 
