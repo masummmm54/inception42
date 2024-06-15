@@ -1,3 +1,27 @@
- ⠿ Container srcs-nginx-1      Starting                                           0.8s 
-Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: error during container init: error mounting /home/muhakose/inception42/srcs/nginx.conf to rootfs at /etc/nginx/nginx.conf: mount /home/muhakose/inception42/srcs/nginx.conf:/etc/nginx/nginx.conf (via /proc/self/fd/6), flags: 0x5001: not a directory: unknown: Are you trying to mount a directory onto a file (or vice-versa)? Check if the specified host path exists and is the expected type
-make: *** [Makefile:10: up] Error 1
+.
+├── Makefile
+├── out
+├── secrets
+│   ├── db_password.txt
+│   ├── db_root_password.txt
+│   └── db_user.txt
+└── srcs
+    ├── docker-compose.yml
+    ├── mariadb
+    ├── nginx.conf
+    └── requirements
+        ├── mariadb
+        │   └── Dockerfile
+        ├── nginx
+        │   ├── conf
+        │   │   └── ssl
+        │   │       ├── muhakose.42.fr.crt
+        │   │       └── muhakose.42.fr.key
+        │   ├── Dockerfile
+        │   └── nginx.conf
+        └── wordpress
+            ├── Dockerfile
+            ├── php-fpm.conf
+            └── wp-config.php
+
+10 directories, 15 files
