@@ -11,25 +11,27 @@ services:
       - .env
     networks:
       - wpsite
+
   wordpress:
     depends_on:
       - mariadb
     build:
       dockerfile: requirements/wordpress/Dockerfile
     ports:
-      - '8000:80'
+      - '443:443'
     restart: always
     volumes: ['/home/muhakose/data:/var/www/html']
     env_file:
       - .env
     networks:
       - wpsite
+
   nginx:
     build:
       context: requirements/nginx
       dockerfile: Dockerfile
     ports:
-      - "8000:80"
+      - "443:443"
     volumes:
       - ./requirements/nginx/conf:/etc/nginx/conf.d
     networks:
