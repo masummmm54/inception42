@@ -26,7 +26,8 @@ services:
       - wpsite
   nginx:
     build:
-      dockerfile: requirements/nginx/Dockerfile
+      context: requirements/nginx
+      dockerfile: Dockerfile
     ports:
       - "8000:80"
     volumes:
