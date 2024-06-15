@@ -1,4 +1,4 @@
-FROM wordpress:6.5.4
+FROM wordpress:latest
 
 
 EXPOSE 80
