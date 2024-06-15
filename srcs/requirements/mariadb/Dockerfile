@@ -1,3 +1,3 @@
-FROM mariadb:11.4.2
+FROM mariadb:latest
 
 EXPOSE 3306
