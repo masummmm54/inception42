@@ -6,6 +6,7 @@ services:
       dockerfile: requirements/mariadb/Dockerfile
     volumes:
       - db_data:/var/lib/mysql
+    restart: always
     env_file:
       - .env
     networks:
@@ -15,6 +16,7 @@ services:
       - mariadb
     build:
       dockerfile: requirements/wordpress/Dockerfile
+    restart: always
     volumes: ['/home/muhakose/data:/var/www/html']
     ports:
       - "8080:80"
