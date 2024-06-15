@@ -1,4 +1,4 @@
-FROM wordpress:php7.4-fpm-alpine
+FROM wordpress
 
 RUN apk update && apk add --no-cache bash
 
