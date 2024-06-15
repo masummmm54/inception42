@@ -1,4 +1,9 @@
-FROM wordpress:latest
+FROM wordpress:5.7.2-fpm-alpine
 
+RUN apk add --no-cache \
+	php7-mysqli \
+	php7-mbstring \
+	php7-jsob \
+	php7-session
 
 EXPOSE 80
