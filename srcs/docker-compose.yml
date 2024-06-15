@@ -2,7 +2,8 @@ version: '3.7'
 
 services:
   mariadb:
-    build: 
+    build:
+      name: mariadb
       dockerfile: requirements/mariadb/Dockerfile
     volumes:
       - db_data:/var/lib/mysql
@@ -14,7 +15,8 @@ services:
   wordpress:
     depends_on:
       - mariadb
-    build: 
+    build:
+      name: wordpress
       dockerfile: requirements/wordpress/Dockerfile
     ports:
       - '8000:80'
