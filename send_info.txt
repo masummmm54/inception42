@@ -1,10 +1,27 @@
-docker run --rm -it mariadb:latest sh -c 'id mysql'
+sudo apt update
+sudo apt upgrade -y
 
-sudo chown -R 999:999 /home/your_login/data/mariadb
+sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
 
-sudo mkdir -p /etc/ssl/certs /etc/ssl/private
-sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/ssl-cert-snakeoil.key -out /etc/ssl/certs/ssl-cert-snakeoil.pem -subj "/CN=your_login.42.fr"
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
-mkdir -p srcs/requirements/nginx/certs
-cp /etc/ssl/certs/ssl-cert-snakeoil.pem srcs/requirements/nginx/certs/
-cp /etc/ssl/private/ssl-cert-snakeoil.key srcs/requirements/nginx/certs/
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+sudo apt update
+
+sudo apt install docker-ce docker-ce-cli containerd.io -y
+
+sudo systemctl start docker
+sudo systemctl enable docker
+
+sudo docker run hello-world
+
+sudo curl -L "https://github.com/docker/compose/releases/download/v2.17.3/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+sudo chmod +x /usr/local/bin/docker-compose
+
+docker-compose --version
+
+sudo usermod -aG docker $USER
+
+newgrp docker
