@@ -46,7 +46,7 @@ services:
     container_name: nginx
     volumes:
       - wp_data:/var/www/html
-      - /etc/ssl/private/:/etc/nginx/ssl:ro
+      - /etc/ssl/:/etc/nginx/ssl:ro
     ports:
       - "443:443"
     networks:
