@@ -1,27 +1,7 @@
-.
-├── Makefile
-├── out
-├── secrets
-│   ├── db_password.txt
-│   ├── db_root_password.txt
-│   └── db_user.txt
-└── srcs
-    ├── docker-compose.yml
-    ├── mariadb
-    ├── nginx.conf
-    └── requirements
-        ├── mariadb
-        │   └── Dockerfile
-        ├── nginx
-        │   ├── conf
-        │   │   └── ssl
-        │   │       ├── muhakose.42.fr.crt
-        │   │       └── muhakose.42.fr.key
-        │   ├── Dockerfile
-        │   └── nginx.conf
-        └── wordpress
-            ├── Dockerfile
-            ├── php-fpm.conf
-            └── wp-config.php
+127.0.0.1       muhakose.42.fr
+127.0.1.1       muhakose.muhakose       muhakose
 
-10 directories, 15 files
+# The following lines are desirable for IPv6 capable hosts
+::1     localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
