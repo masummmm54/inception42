@@ -1,9 +1,20 @@
-Certbot failed to authenticate some domains (authenticator: standalone). The Certificate Authority reported these problems:
-  Domain: muhakose.42.fr
-  Type:   dns
-  Detail: DNS problem: NXDOMAIN looking up A for muhakose.42.fr - check that a DNS record exists for this domain; DNS problem: NXDOMAIN looking up AAAA for muhakose.42.fr - check that a DNS record exists for this domain
+; <<>> DiG 9.18.24-1-Debian <<>> muhakose.42.fr
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 28266
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
 
-Hint: The Certificate Authority failed to download the challenge files from the temporary standalone webserver started by Certbot on port 80. Ensure that the listed domains point to this machine and that it can accept inbound connections from the internet.
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+; COOKIE: eeb03677a92d4d1b7fd5f7f5666df9d438c6693d7512b074 (good)
+;; QUESTION SECTION:
+;muhakose.42.fr.			IN	A
 
-Some challenges have failed.
-Ask for help or search for solutions at https://community.letsencrypt.org. See the logfile /var/log/letsencrypt/letsencrypt.log or re-run Certbot with -v for more details.
+;; AUTHORITY SECTION:
+42.fr.			1800	IN	SOA	aaron.ns.cloudflare.com. dns.cloudflare.com. 2343558540 10000 2400 604800 1800
+
+;; Query time: 20 msec
+;; SERVER: 10.51.1.253#53(10.51.1.253) (UDP)
+;; WHEN: Sat Jun 15 16:30:12 EDT 2024
+;; MSG SIZE  rcvd: 134
+
