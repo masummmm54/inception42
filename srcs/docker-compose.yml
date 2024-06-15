@@ -12,6 +12,7 @@ services:
       - .env
     networks:
       - wpsite
+
   wordpress:
     depends_on:
       - mariadb
@@ -19,11 +20,13 @@ services:
       context: requirements/wordpress
       dockerfile: Dockerfile
     restart: always
-    volumes: ['/home/muhakose/data:/var/www/html']
+    volumes:
+      - /home/muhakose/data:/var/www/wordpress
     env_file:
       - .env
     networks:
       - wpsite
+
   nginx:
     depends_on:
       - wordpress
@@ -36,7 +39,6 @@ services:
       - "8080:80"
     networks:
       - wpsite
-
 
 networks:
   wpsite:
