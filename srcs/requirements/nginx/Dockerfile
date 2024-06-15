@@ -1,5 +1,11 @@
-FROM nginx:stable-alpine
+# Use a specific version of Nginx with Alpine
+FROM nginx:1.21-alpine
 
-COPY ./conf /etc/nginx/conf.d
+# Copy Nginx configuration file
+COPY ./nginx.conf /etc/nginx/nginx.conf
 
-EXPOSE 443
+# Expose port 80
+EXPOSE 80
+
+# Start Nginx
+CMD ["nginx", "-g", "daemon off;"]

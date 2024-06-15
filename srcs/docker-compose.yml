@@ -20,10 +20,20 @@ services:
       dockerfile: Dockerfile
     restart: always
     volumes: ['/home/muhakose/data:/var/www/html']
-    ports:
-      - "8080:80"
     env_file:
       - .env
+    networks:
+      - wpsite
+  nginx:
+    depends_on:
+      - wordpress
+    build:
+      context: requirements/nginx
+      dockerfile: Dockerfile
+    volumes:
+      - /home/muhakose/data:/var/www/wordpress
+    ports:
+      - "8080:80"
     networks:
       - wpsite
 
