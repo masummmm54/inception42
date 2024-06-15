@@ -20,7 +20,7 @@ services:
     ports:
       - '8000:80'
     restart: always
-    volumes: ['./:/var/www/html']
+    volumes: ['/home/muhakose/data:/var/www/html']
     environment:
       WORDPRESS_DB_HOST: mariadb:3306
       WORDPRESS_DB_USER: wordpress
