@@ -31,6 +31,8 @@ services:
       - "8000:80"
     volumes:
       - ./requirements/nginx/conf:/etc/nginx/conf.d
+    networks:
+      - wpsite
 
 networks:
   wpsite:
