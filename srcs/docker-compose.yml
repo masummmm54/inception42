@@ -1,10 +1,10 @@
 version: '3.7'
 
-secrets:
+services:
   db:
-    image: mysl:5.7
+    image: mysql:5.7
     volumes:
-      - db_data:/var/lib/mysl
+      - db_data:/var/lib/mysql
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: password
@@ -12,7 +12,7 @@ secrets:
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
     networks:
-      -wpsite
+      - wpsite
   wordpress:
     depends_on:
       - db
