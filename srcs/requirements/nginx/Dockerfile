@@ -1,11 +1,13 @@
-# Use a specific version of Nginx with Alpine
-FROM nginx:1.21-alpine
+FROM debian:buster
 
-# Copy Nginx configuration file
-COPY ./nginx.conf /etc/nginx/nginx.conf
 
-# Expose port 443
-EXPOSE 443
+RUN apt -y update && apt install -y nginx && apt install openssl -y
 
-# Start Nginx
-CMD ["nginx", "-g", "daemon off;"]
+
+
+# COPY ./conf/default /etc/nginx/sites-available/
+
+COPY ./tools/script.sh /
+
+
+CMD [ "/script.sh" ]
