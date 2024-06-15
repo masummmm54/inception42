@@ -1,41 +1,33 @@
-version: '3.8'
+version: '3.7'
 
-services:
-  nginx:
-    build: ./requirements/nginx
-    container_name: nginx
-    ports:
-      - "443:443"
+secrets:
+  db:
+    image: mysl:5.7
     volumes:
-      - /home/masum/data/nginx:/var/www/html
-    networks:
-      - my_network
-
-  mariadb:
-    build: ./requirements/mariadb
-    container_name: mariadb
+      - db_data:/var/lib/mysl
+    restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
-      MYSQL_USER: ${MYSQL_USER}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-    volumes:
-      - /home/masum/data/mariadb:/var/lib/mysql
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
     networks:
-      - my_network
-
+      -wpsite
   wordpress:
-    build: ./requirements/wordpress
-    container_name: wordpress
+    depends_on:
+      - db
+    image: wordpress:latest
+    ports:
+      - '8000:80'
+    restart: always
+    volumes: ['./:/var/www/html']
     environment:
-      WORDPRESS_DB_HOST: mariadb
-      WORDPRESS_DB_USER: ${MYSQL_USER}
-      WORDPRESS_DB_PASSWORD: ${MYSQL_PASSWORD}
-      WORDPRESS_DB_NAME: ${MYSQL_DATABASE}
-    volumes:
-      - /home/masum/data/wordpress:/var/www/html
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress   #need to match with db user and password!
+      WORDPRESS_DB_PASSWORD: wordpress
     networks:
-      - my_network
-
+      - wpsite
 networks:
-  my_network:
+  wpsite:
+volumes:
+  db_data:
