@@ -17,8 +17,6 @@ services:
       - mariadb
     build:
       dockerfile: requirements/wordpress/Dockerfile
-    ports:
-      - '443:443'
     restart: always
     volumes: ['/home/muhakose/data:/var/www/html']
     env_file:
