@@ -36,6 +36,7 @@ services:
       - ./requirements/nginx/conf:/etc/nginx/conf.d
     networks:
       - wpsite
+    restart: always
 
 networks:
   wpsite:
