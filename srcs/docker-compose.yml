@@ -1,8 +1,8 @@
 version: '3.7'
 
 services:
-  db:
-    image: mysql:5.7
+  mariadb:
+    image: mariadb
     volumes:
       - db_data:/var/lib/mysql
     restart: always
@@ -15,14 +15,14 @@ services:
       - wpsite
   wordpress:
     depends_on:
-      - db
-    image: wordpress:latest
+      - mariadb
+    image: wordpress
     ports:
       - '8000:80'
     restart: always
     volumes: ['./:/var/www/html']
     environment:
-      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_HOST: mariadb:3306
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: wordpress
     networks:
