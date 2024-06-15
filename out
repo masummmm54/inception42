@@ -1,4 +1,85 @@
-⠿ Container srcs-wordpress-1  Starting                                 0.6s 
-Error response from daemon: driver failed programming external connectivity on endpoint srcs-wordpress-1 (976451d9929d5ede553e6710e3870d50a21746eeb9c37213c26ab34a5b351e66): Bind for 0.0.0.0:443 failed: port is already allocated
-make: *** [Makefile:10: up] Error 1
-#   
+docker-compose -f srcs/docker-compose.yml logs
+srcs-wordpress-1  | [15-Jun-2024 14:26:51] NOTICE: fpm is running, pid 1
+srcs-wordpress-1  | [15-Jun-2024 14:26:51] NOTICE: ready to handle connections
+srcs-nginx-1      | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+srcs-nginx-1      | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+srcs-nginx-1      | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+srcs-nginx-1      | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+srcs-nginx-1      | 10-listen-on-ipv6-by-default.sh: info: /etc/nginx/conf.d/default.conf differs from the packaged version
+srcs-nginx-1      | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+srcs-nginx-1      | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+srcs-nginx-1      | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+srcs-nginx-1      | /docker-entrypoint.sh: Configuration complete; ready for start up
+srcs-nginx-1      | 2024/06/15 14:26:51 [notice] 1#1: using the "epoll" event method
+srcs-nginx-1      | 2024/06/15 14:26:51 [notice] 1#1: nginx/1.26.1
+srcs-nginx-1      | 2024/06/15 14:26:51 [notice] 1#1: built by gcc 13.2.1 20231014 (Alpine 13.2.1_git20231014) 
+srcs-nginx-1      | 2024/06/15 14:26:51 [notice] 1#1: OS: Linux 6.1.0-21-amd64
+srcs-nginx-1      | 2024/06/15 14:26:51 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+srcs-nginx-1      | 2024/06/15 14:26:51 [notice] 1#1: start worker processes
+srcs-nginx-1      | 2024/06/15 14:26:51 [notice] 1#1: start worker process 28
+srcs-mariadb-1    | 2024-06-15 14:26:51+00:00 [Note] [Entrypoint]: Entrypoint script for MariaDB Server 1:10.5.25+maria~ubu2004 started.
+srcs-mariadb-1    | 2024-06-15 14:26:51+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+srcs-mariadb-1    | 2024-06-15 14:26:51+00:00 [Note] [Entrypoint]: Entrypoint script for MariaDB Server 1:10.5.25+maria~ubu2004 started.
+srcs-mariadb-1    | 2024-06-15 14:26:52+00:00 [Note] [Entrypoint]: MariaDB upgrade information missing, assuming required
+srcs-mariadb-1    | 2024-06-15 14:26:52+00:00 [Note] [Entrypoint]: MariaDB upgrade (mysql_upgrade or creating healthcheck users) required, but skipped due to $MARIADB_AUTO_UPGRADE setting
+srcs-mariadb-1    | 2024-06-15 14:26:52 0 [Note] Starting MariaDB 10.5.25-MariaDB-ubu2004 source revision 29c185bd771ac441121468b3850d6dc8d13b8a1f as process 1
+srcs-mariadb-1    | 2024-06-15 14:26:52 0 [Note] InnoDB: Uses event mutexes
+srcs-mariadb-1    | 2024-06-15 14:26:52 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+srcs-mariadb-1    | 2024-06-15 14:26:52 0 [Note] InnoDB: Number of pools: 1
+srcs-mariadb-1    | 2024-06-15 14:26:52 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
+srcs-mariadb-1    | 2024-06-15 14:26:52 0 [Note] mysqld: O_TMPFILE is not supported on /tmp (disabling future attempts)
+srcs-mariadb-1    | 2024-06-15 14:26:52 0 [Note] InnoDB: Using Linux native AIO
+srcs-mariadb-1    | 2024-06-15 14:26:52 0 [Note] InnoDB: Initializing buffer pool, total size = 134217728, chunk size = 134217728
+srcs-mariadb-1    | 2024-06-15 14:26:52 0 [Note] InnoDB: Completed initialization of buffer pool
+srcs-mariadb-1    | 2024-06-15 14:26:52 0 [ERROR] InnoDB: Unsupported redo log format. The redo log was created with MariaDB 11.4.2.
+srcs-mariadb-1    | 2024-06-15 14:26:52 0 [ERROR] InnoDB: Plugin initialization aborted with error Generic error
+srcs-mariadb-1    | 2024-06-15 14:26:52 0 [Note] InnoDB: Starting shutdown...
+srcs-mariadb-1    | 2024-06-15 14:26:52 0 [ERROR] Plugin 'InnoDB' registration as a STORAGE ENGINE failed.
+srcs-mariadb-1    | 2024-06-15 14:26:52 0 [Note] Plugin 'FEEDBACK' is disabled.
+srcs-mariadb-1    | 2024-06-15 14:26:52 0 [ERROR] Could not open mysql.plugin table: "Unknown storage engine 'InnoDB'". Some plugins may be not loaded
+srcs-mariadb-1    | 2024-06-15 14:26:52 0 [ERROR] Unknown/unsupported storage engine: InnoDB
+srcs-mariadb-1    | 2024-06-15 14:26:52 0 [ERROR] Aborting
+srcs-mariadb-1    | 2024-06-15 14:26:53+00:00 [Note] [Entrypoint]: Entrypoint script for MariaDB Server 1:10.5.25+maria~ubu2004 started.
+srcs-mariadb-1    | 2024-06-15 14:26:54+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+srcs-mariadb-1    | 2024-06-15 14:26:54+00:00 [Note] [Entrypoint]: Entrypoint script for MariaDB Server 1:10.5.25+maria~ubu2004 started.
+srcs-mariadb-1    | 2024-06-15 14:26:54+00:00 [Note] [Entrypoint]: MariaDB upgrade information missing, assuming required
+srcs-mariadb-1    | 2024-06-15 14:26:54+00:00 [Note] [Entrypoint]: MariaDB upgrade (mysql_upgrade or creating healthcheck users) required, but skipped due to $MARIADB_AUTO_UPGRADE setting
+srcs-mariadb-1    | 2024-06-15 14:26:54 0 [Note] Starting MariaDB 10.5.25-MariaDB-ubu2004 source revision 29c185bd771ac441121468b3850d6dc8d13b8a1f as process 1
+srcs-mariadb-1    | 2024-06-15 14:26:54 0 [Note] InnoDB: Uses event mutexes
+srcs-mariadb-1    | 2024-06-15 14:26:54 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+srcs-mariadb-1    | 2024-06-15 14:26:54 0 [Note] InnoDB: Number of pools: 1
+srcs-mariadb-1    | 2024-06-15 14:26:54 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
+srcs-mariadb-1    | 2024-06-15 14:26:54 0 [Note] mysqld: O_TMPFILE is not supported on /tmp (disabling future attempts)
+srcs-mariadb-1    | 2024-06-15 14:26:54 0 [Note] InnoDB: Using Linux native AIO
+srcs-mariadb-1    | 2024-06-15 14:26:54 0 [Note] InnoDB: Initializing buffer pool, total size = 134217728, chunk size = 134217728
+srcs-mariadb-1    | 2024-06-15 14:26:54 0 [Note] InnoDB: Completed initialization of buffer pool
+srcs-mariadb-1    | 2024-06-15 14:26:54 0 [ERROR] InnoDB: Unsupported redo log format. The redo log was created with MariaDB 11.4.2.
+srcs-mariadb-1    | 2024-06-15 14:26:54 0 [ERROR] InnoDB: Plugin initialization aborted with error Generic error
+srcs-mariadb-1    | 2024-06-15 14:26:54 0 [Note] InnoDB: Starting shutdown...
+srcs-mariadb-1    | 2024-06-15 14:26:55 0 [ERROR] Plugin 'InnoDB' registration as a STORAGE ENGINE failed.
+srcs-mariadb-1    | 2024-06-15 14:26:55 0 [Note] Plugin 'FEEDBACK' is disabled.
+srcs-mariadb-1    | 2024-06-15 14:26:55 0 [ERROR] Could not open mysql.plugin table: "Unknown storage engine 'InnoDB'". Some plugins may be not loaded
+srcs-mariadb-1    | 2024-06-15 14:26:55 0 [ERROR] Unknown/unsupported storage engine: InnoDB
+srcs-mariadb-1    | 2024-06-15 14:26:55 0 [ERROR] Aborting
+srcs-mariadb-1    | 2024-06-15 14:26:55+00:00 [Note] [Entrypoint]: Entrypoint script for MariaDB Server 1:10.5.25+maria~ubu2004 started.
+srcs-mariadb-1    | 2024-06-15 14:26:56+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+srcs-mariadb-1    | 2024-06-15 14:26:56+00:00 [Note] [Entrypoint]: Entrypoint script for MariaDB Server 1:10.5.25+maria~ubu2004 started.
+srcs-mariadb-1    | 2024-06-15 14:26:56+00:00 [Note] [Entrypoint]: MariaDB upgrade information missing, assuming required
+srcs-mariadb-1    | 2024-06-15 14:26:56+00:00 [Note] [Entrypoint]: MariaDB upgrade (mysql_upgrade or creating healthcheck users) required, but skipped due to $MARIADB_AUTO_UPGRADE setting
+srcs-mariadb-1    | 2024-06-15 14:26:57 0 [Note] Starting MariaDB 10.5.25-MariaDB-ubu2004 source revision 29c185bd771ac441121468b3850d6dc8d13b8a1f as process 1
+srcs-mariadb-1    | 2024-06-15 14:26:57 0 [Note] InnoDB: Uses event mutexes
+srcs-mariadb-1    | 2024-06-15 14:26:57 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+srcs-mariadb-1    | 2024-06-15 14:26:57 0 [Note] InnoDB: Number of pools: 1
+srcs-mariadb-1    | 2024-06-15 14:26:57 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
+srcs-mariadb-1    | 2024-06-15 14:26:57 0 [Note] mysqld: O_TMPFILE is not supported on /tmp (disabling future attempts)
+srcs-mariadb-1    | 2024-06-15 14:26:57 0 [Note] InnoDB: Using Linux native AIO
+srcs-mariadb-1    | 2024-06-15 14:26:57 0 [Note] InnoDB: Initializing buffer pool, total size = 134217728, chunk size = 134217728
+srcs-mariadb-1    | 2024-06-15 14:26:57 0 [Note] InnoDB: Completed initialization of buffer pool
+srcs-mariadb-1    | 2024-06-15 14:26:57 0 [ERROR] InnoDB: Unsupported redo log format. The redo log was created with MariaDB 11.4.2.
+srcs-mariadb-1    | 2024-06-15 14:26:57 0 [ERROR] InnoDB: Plugin initialization aborted with error Generic error
+srcs-mariadb-1    | 2024-06-15 14:26:57 0 [Note] InnoDB: Starting shutdown...
+srcs-mariadb-1    | 2024-06-15 14:26:57 0 [ERROR] Plugin 'InnoDB' registration as a STORAGE ENGINE failed.
+srcs-mariadb-1    | 2024-06-15 14:26:57 0 [Note] Plugin 'FEEDBACK' is disabled.
+srcs-mariadb-1    | 2024-06-15 14:26:57 0 [ERROR] Could not open mysql.plugin table: "Unknown storage engine 'InnoDB'". Some plugins may be not loaded
+srcs-mariadb-1    | 2024-06-15 14:26:57 0 [ERROR] Unknown/unsupported storage engine: InnoDB
+srcs-mariadb-1    | 2024-06-15 14:26:57 0 [ERROR] Aborting
