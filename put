@@ -1,9 +1,9 @@
-188.244.102.158 muhakose.42.fr
-127.0.0.1       localhost
-127.0.1.1       muhakose.muhakose       muhakose
+Certbot failed to authenticate some domains (authenticator: standalone). The Certificate Authority reported these problems:
+  Domain: muhakose.42.fr
+  Type:   dns
+  Detail: DNS problem: NXDOMAIN looking up A for muhakose.42.fr - check that a DNS record exists for this domain; DNS problem: NXDOMAIN looking up AAAA for muhakose.42.fr - check that a DNS record exists for this domain
 
-# The following lines are desirable for IPv6 capable hosts
-::1     localhost ip6-localhost ip6-loopback
-ff02::1 ip6-allnodes
-ff02::2 ip6-allrouters
+Hint: The Certificate Authority failed to download the challenge files from the temporary standalone webserver started by Certbot on port 80. Ensure that the listed domains point to this machine and that it can accept inbound connections from the internet.
 
+Some challenges have failed.
+Ask for help or search for solutions at https://community.letsencrypt.org. See the logfile /var/log/letsencrypt/letsencrypt.log or re-run Certbot with -v for more details.
