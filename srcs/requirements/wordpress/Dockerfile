@@ -1,4 +1,4 @@
 FROM wordpress:5.7.2-fpm-alpine
 
 
-EXPOSE 80
+EXPOSE 443
