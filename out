@@ -1,0 +1,8 @@
+ => ERROR [3/7] RUN addgroup -S www-data && adduser -S www-data -G www-data       0.2s
+------                                                                                 
+ > [3/7] RUN addgroup -S www-data && adduser -S www-data -G www-data:
+#0 0.206 addgroup: group 'www-data' in use
+------
+failed to solve: process "/bin/sh -c addgroup -S www-data && adduser -S www-data -G www-data" did not complete successfully: exit code: 1
+make: *** [Makefile:7: build] Error 17
+
