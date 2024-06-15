@@ -1,12 +1,11 @@
- => ERROR [3/5] RUN curl -o wordpress.tar.gz https://wordpress.org/wordpress-5.8  2.6s 
+ => ERROR [4/6] RUN curl -o wordpress.tar.gz https://wordpress.org/wordpress-5.8  3.3s 
 ------                                                                                 
- > [3/5] RUN curl -o wordpress.tar.gz https://wordpress.org/wordpress-5.8.3.tar.gz     && tar -xzf wordpress.tar.gz -C /var/www     && rm wordpress.tar.gz     && chown -R www-data:www-data /var/www/wordpress:                                                     
-#0 0.224   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-#0 0.228                                  Dload  Upload   Total   Spent    Left  Speed
-100 14.3M  100 14.3M    0     0  6280k      0  0:00:02  0:00:02 --:--:-- 6280k
-#0 2.577 tar: /var/www: Cannot open: No such file or directory
-#0 2.578 tar: Error is not recoverable: exiting now
+ > [4/6] RUN curl -o wordpress.tar.gz https://wordpress.org/wordpress-5.8.3.tar.gz     && tar -xzf wordpress.tar.gz -C /var/www     && rm wordpress.tar.gz     && chown -R www-data:www-data /var/www/wordpress:                                                     
+#0 0.241   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+#0 0.245                                  Dload  Upload   Total   Spent    Left  Speed
+100 14.3M  100 14.3M    0     0  6151k      0  0:00:02  0:00:02 --:--:-- 6151k
+#0 3.158 chown: unknown user/group www-data:www-data
 ------
-failed to solve: process "/bin/sh -c curl -o wordpress.tar.gz https://wordpress.org/wordpress-5.8.3.tar.gz     && tar -xzf wordpress.tar.gz -C /var/www     && rm wordpress.tar.gz     && chown -R www-data:www-data /var/www/wordpress" did not complete successfully: exit code: 2
+failed to solve: process "/bin/sh -c curl -o wordpress.tar.gz https://wordpress.org/wordpress-5.8.3.tar.gz     && tar -xzf wordpress.tar.gz -C /var/www     && rm wordpress.tar.gz     && chown -R www-data:www-data /var/www/wordpress" did not complete successfully: exit code: 1
 make: *** [Makefile:7: build] Error 17
 
