@@ -29,7 +29,7 @@ services:
       context: requirements/nginx
       dockerfile: Dockerfile
     ports:
-      - "8443:443"
+      - "443:443"
     volumes:
       - ./requirements/nginx/conf:/etc/nginx/conf.d
     networks:
