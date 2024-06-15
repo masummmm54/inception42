@@ -14,7 +14,8 @@ services:
   wordpress:
     depends_on:
       - mariadb
-    image: wordpress
+    build: 
+      dockerfile: requirements/wordpress/Dockerfile
     ports:
       - '8000:80'
     restart: always
