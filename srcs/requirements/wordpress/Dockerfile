@@ -4,7 +4,7 @@ FROM wordpress:latest
 RUN apt-get update && apt-get install -y php7.4-fpm
 
 # Copy the setup script
-COPY conf.sh /usr/local/bin/conf.sh
+COPY ./tools/conf.sh /usr/local/bin/conf.sh
 RUN chmod +x /usr/local/bin/conf.sh
 
 # Set the entrypoint
