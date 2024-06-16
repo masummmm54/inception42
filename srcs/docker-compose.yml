@@ -32,7 +32,7 @@ services:
     depends_on:
       - mariadb
     volumes:
-      - mariadb:/var/www/wordpress
+      - wordpress:/var/www/wordpress
     env_file:
       - .env
     networks:
@@ -50,7 +50,7 @@ volumes:
       o: bind
       type: none
   wordpress:
-    name:
+    name: wordpress
     driver: local
     driver_opts:
       device: /home/muhakose/data/wordpress
