@@ -12,17 +12,11 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docke
 # Update package index and install Docker Engine
 sudo apt update && sudo apt install -y docker-ce docker-ce-cli containerd.io
 
-# Verify Docker installation
-sudo docker run hello-world
-
 # Download Docker Compose binary
 sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
 # Apply executable permissions to the Docker Compose binary
 sudo chmod +x /usr/local/bin/docker-compose
-
-# Verify Docker Compose installation
-docker-compose --version
 
 # Create the docker group and add your user to it
 sudo groupadd docker
@@ -30,3 +24,6 @@ sudo usermod -aG docker $USER
 
 # Print completion message
 echo "Docker and Docker Compose installation completed. Please log out and log back in to apply group changes."
+
+# Prompt the user to log out and log back in
+echo "Please log out and log back in, or restart your session, to apply the changes."
