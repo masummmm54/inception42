@@ -1,11 +1,11 @@
-FROM wordpress:latest
+FROM debian:bullseye
 
-# Install PHP-FPM
-RUN apt-get update && apt-get install -y php7.4-fpm
+RUN apt-get update && apt-get upgrade -y
 
-# Copy the setup script
-COPY ./tools/conf.sh /usr/local/bin/conf.sh
-RUN chmod +x /usr/local/bin/conf.sh
+RUN apt-get install -y curl php php7.4 php-mysql mariadb-client netcat
 
-# Set the entrypoint
-ENTRYPOINT ["/usr/local/bin/conf.sh"]
+COPY ./tools/conf.sh /
+
+RUN chmod +x conf.sh
+
+ENTRYPOINT [ "./conf.sh" ]
