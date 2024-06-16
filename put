@@ -1,901 +1,139 @@
 docker-compose -f srcs/docker-compose.yml logs
 mariadb  | Starting MariaDB database server: mariadbd.
-mariadb  | 240616 12:27:52 mysqld_safe Logging to syslog.
-mariadb  | 240616 12:27:52 mysqld_safe Starting mariadbd daemon with databases from /var/lib/mysql
-mariadb  | Starting MariaDB database server: mariadbd.
-mariadb  | 240616 12:28:00 mysqld_safe Logging to syslog.
-mariadb  | 240616 12:28:00 mysqld_safe Starting mariadbd daemon with databases from /var/lib/mysql
-mariadb  | Starting MariaDB database server: mariadbd.
-mariadb  | 240616 12:28:08 mysqld_safe Logging to syslog.
-mariadb  | 240616 12:28:08 mysqld_safe Starting mariadbd daemon with databases from /var/lib/mysql
-mariadb  | Starting MariaDB database server: mariadbd.
-mariadb  | 240616 12:28:16 mysqld_safe Logging to syslog.
-mariadb  | 240616 12:28:16 mysqld_safe Starting mariadbd daemon with databases from /var/lib/mysql
-mariadb  | Starting MariaDB database server: mariadbd.
-mariadb  | 240616 12:28:25 mysqld_safe Logging to syslog.
-mariadb  | 240616 12:28:25 mysqld_safe Starting mariadbd daemon with databases from /var/lib/mysql
-mariadb  | Starting MariaDB database server: mariadbd.
-mariadb  | 240616 12:28:34 mysqld_safe Logging to syslog.
-mariadb  | 240616 12:28:34 mysqld_safe Starting mariadbd daemon with databases from /var/lib/mysql
-mariadb  | Starting MariaDB database server: mariadbd.
-mariadb  | 240616 12:28:45 mysqld_safe Logging to syslog.
-mariadb  | 240616 12:28:45 mysqld_safe Starting mariadbd daemon with databases from /var/lib/mysql
-mariadb  | Starting MariaDB database server: mariadbd.
-mariadb  | 240616 12:28:59 mysqld_safe Logging to syslog.
-mariadb  | 240616 12:28:59 mysqld_safe Starting mariadbd daemon with databases from /var/lib/mysql
-mariadb  | Starting MariaDB database server: mariadbd.
-mariadb  | 240616 12:29:20 mysqld_safe Logging to syslog.
-mariadb  | 240616 12:29:20 mysqld_safe Starting mariadbd daemon with databases from /var/lib/mysql
-mariadb  | Starting MariaDB database server: mariadbd.
-mariadb  | 240616 12:29:53 mysqld_safe Logging to syslog.
-mariadb  | 240616 12:29:53 mysqld_safe Starting mariadbd daemon with databases from /var/lib/mysql
-mariadb  | Starting MariaDB database server: mariadbd.
-mariadb  | 240616 12:30:52 mysqld_safe Logging to syslog.
-mariadb  | 240616 12:30:52 mysqld_safe Starting mariadbd daemon with databases from /var/lib/mysql
-mariadb  | Starting MariaDB database server: mariadbd.
-mariadb  | 240616 12:32:00 mysqld_safe Logging to syslog.
-mariadb  | 240616 12:32:00 mysqld_safe Starting mariadbd daemon with databases from /var/lib/mysql
-mariadb  | Starting MariaDB database server: mariadbd.
-mariadb  | 240616 12:33:08 mysqld_safe Logging to syslog.
-mariadb  | 240616 12:33:08 mysqld_safe Starting mariadbd daemon with databases from /var/lib/mysql
+mariadb  | 240616 12:40:27 mysqld_safe Logging to syslog.
+mariadb  | 240616 12:40:27 mysqld_safe Starting mariadbd daemon with databases from /var/lib/mysql
 wordpress  |   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
 wordpress  |                                  Dload  Upload   Total   Spent    Left  Speed
-wordpress  |   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 6831k  100 6831k    0     0  33.1M      0 --:--:-- --:--:-- --:--:-- 33.0M
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
+wordpress  |   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 50 6831k   50 3466k    0     0  14.5M      0 --:--:-- --:--:-- --:--:-- 14.4M100 6831k  100 6831k    0     0  19.1M      0 --:--:-- --:--:-- --:--:-- 19.1M
+wordpress  | nc: connect to mariadb (172.29.0.2) port 3306 (tcp) failed: Connection refused
 wordpress  | [======== WAITING FOR MARIADB TO START... ========]
 wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
+wordpress  | nc: connect to mariadb (172.29.0.2) port 3306 (tcp) failed: Connection refused
 wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
+wordpress  | nc: connect to mariadb (172.29.0.2) port 3306 (tcp) failed: Connection refused
+wordpress  | nc: connect to mariadb (172.29.0.2) port 3306 (tcp) failed: Connection refused
 wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
+wordpress  | nc: connect to mariadb (172.29.0.2) port 3306 (tcp) failed: Connection refused
 wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
+wordpress  | nc: connect to mariadb (172.29.0.2) port 3306 (tcp) failed: Connection refused
 wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
+wordpress  | nc: connect to mariadb (172.29.0.2) port 3306 (tcp) failed: Connection refused
 wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | [======== MARIADB IS NOT RESPONDING ========]
+wordpress  | Connection to mariadb (172.29.0.2) 3306 port [tcp/mysql] succeeded!
+wordpress  | [======== MARIADB IS UP AND RUNNING ========]
 wordpress  | Error: WordPress files seem to already be present here.
 wordpress  | Error: The 'wp-config.php' file already exists.
-wordpress  | Error: Error establishing a database connection. This either means that the username and password information in your `wp-config.php` file is incorrect or that contact with the database server at `mariadb:3306` could not be established. This could mean your host’s database server is down.
-wordpress  | Error: Error establishing a database connection.
+wordpress  | WordPress is already installed.
+wordpress  | Error: The 'muhammet' username is already registered.
 wordpress  | sed: can't read /etc/php/7.4/fpm/pool.d/www.conf: No such file or directory
 wordpress  | ./conf.sh: line 47: /usr/sbin/php-fpm7.4: No such file or directory
 wordpress  |   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
 wordpress  |                                  Dload  Upload   Total   Spent    Left  Speed
-wordpress  |   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 6831k  100 6831k    0     0  39.7M      0 --:--:-- --:--:-- --:--:-- 39.7M
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | [======== MARIADB IS NOT RESPONDING ========]
+wordpress  |   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 65 6831k   65 4464k    0     0  27.4M      0 --:--:-- --:--:-- --:--:-- 27.2M100 6831k  100 6831k    0     0  29.9M      0 --:--:-- --:--:-- --:--:-- 29.9M
+wordpress  | Connection to mariadb (172.29.0.2) 3306 port [tcp/mysql] succeeded!
+wordpress  | [======== MARIADB IS UP AND RUNNING ========]
 wordpress  | Error: WordPress files seem to already be present here.
 wordpress  | Error: The 'wp-config.php' file already exists.
-wordpress  | Error: Error establishing a database connection. This either means that the username and password information in your `wp-config.php` file is incorrect or that contact with the database server at `mariadb:3306` could not be established. This could mean your host’s database server is down.
-wordpress  | Error: Error establishing a database connection.
+wordpress  | WordPress is already installed.
+wordpress  | Error: The 'muhammet' username is already registered.
 wordpress  | sed: can't read /etc/php/7.4/fpm/pool.d/www.conf: No such file or directory
 wordpress  | ./conf.sh: line 47: /usr/sbin/php-fpm7.4: No such file or directory
 wordpress  |   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
 wordpress  |                                  Dload  Upload   Total   Spent    Left  Speed
-wordpress  |   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 6831k  100 6831k    0     0  34.0M      0 --:--:-- --:--:-- --:--:-- 34.0M
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | [======== MARIADB IS NOT RESPONDING ========]
+wordpress  |   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 6831k  100 6831k    0     0  30.6M      0 --:--:-- --:--:-- --:--:-- 30.6M
+wordpress  | Connection to mariadb (172.29.0.2) 3306 port [tcp/mysql] succeeded!
+wordpress  | [======== MARIADB IS UP AND RUNNING ========]
 wordpress  | Error: WordPress files seem to already be present here.
 wordpress  | Error: The 'wp-config.php' file already exists.
-wordpress  | Error: Error establishing a database connection. This either means that the username and password information in your `wp-config.php` file is incorrect or that contact with the database server at `mariadb:3306` could not be established. This could mean your host’s database server is down.
-wordpress  | Error: Error establishing a database connection.
+wordpress  | WordPress is already installed.
+wordpress  | Error: The 'muhammet' username is already registered.
 wordpress  | sed: can't read /etc/php/7.4/fpm/pool.d/www.conf: No such file or directory
 wordpress  | ./conf.sh: line 47: /usr/sbin/php-fpm7.4: No such file or directory
 wordpress  |   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
 wordpress  |                                  Dload  Upload   Total   Spent    Left  Speed
-wordpress  |   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 6831k  100 6831k    0     0  45.0M      0 --:--:-- --:--:-- --:--:-- 45.0M
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | [======== MARIADB IS NOT RESPONDING ========]
+wordpress  |   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 6831k  100 6831k    0     0  24.9M      0 --:--:-- --:--:-- --:--:-- 24.9M
+wordpress  | Connection to mariadb (172.29.0.2) 3306 port [tcp/mysql] succeeded!
+wordpress  | [======== MARIADB IS UP AND RUNNING ========]
 wordpress  | Error: WordPress files seem to already be present here.
 wordpress  | Error: The 'wp-config.php' file already exists.
-wordpress  | Error: Error establishing a database connection. This either means that the username and password information in your `wp-config.php` file is incorrect or that contact with the database server at `mariadb:3306` could not be established. This could mean your host’s database server is down.
-wordpress  | Error: Error establishing a database connection.
+wordpress  | WordPress is already installed.
+wordpress  | Error: The 'muhammet' username is already registered.
 wordpress  | sed: can't read /etc/php/7.4/fpm/pool.d/www.conf: No such file or directory
 wordpress  | ./conf.sh: line 47: /usr/sbin/php-fpm7.4: No such file or directory
 wordpress  |   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
 wordpress  |                                  Dload  Upload   Total   Spent    Left  Speed
-wordpress  |   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 6831k  100 6831k    0     0  42.7M      0 --:--:-- --:--:-- --:--:-- 42.7M
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | [======== MARIADB IS NOT RESPONDING ========]
+wordpress  |   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 6831k  100 6831k    0     0  31.4M      0 --:--:-- --:--:-- --:--:-- 31.4M
+wordpress  | Connection to mariadb (172.29.0.2) 3306 port [tcp/mysql] succeeded!
+wordpress  | [======== MARIADB IS UP AND RUNNING ========]
 wordpress  | Error: WordPress files seem to already be present here.
 wordpress  | Error: The 'wp-config.php' file already exists.
-wordpress  | Error: Error establishing a database connection. This either means that the username and password information in your `wp-config.php` file is incorrect or that contact with the database server at `mariadb:3306` could not be established. This could mean your host’s database server is down.
-wordpress  | Error: Error establishing a database connection.
-wordpress  | sed: can't read /etc/php/7.4/fpm/pool.d/www.conf: No such file or directory
-wordpress  | ./conf.sh: line 47: /usr/sbin/php-fpm7.4: No such file or directory
-wordpress  |   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-wordpress  |                                  Dload  Upload   Total   Spent    Left  Speed
-wordpress  |   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 6831k  100 6831k    0     0  47.3M      0 --:--:-- --:--:-- --:--:-- 47.3M
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | [======== MARIADB IS NOT RESPONDING ========]
-wordpress  | Error: WordPress files seem to already be present here.
-wordpress  | Error: The 'wp-config.php' file already exists.
-wordpress  | Error: Error establishing a database connection. This either means that the username and password information in your `wp-config.php` file is incorrect or that contact with the database server at `mariadb:3306` could not be established. This could mean your host’s database server is down.
-wordpress  | Error: Error establishing a database connection.
-wordpress  | sed: can't read /etc/php/7.4/fpm/pool.d/www.conf: No such file or directory
-wordpress  | ./conf.sh: line 47: /usr/sbin/php-fpm7.4: No such file or directory
-wordpress  |   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-wordpress  |                                  Dload  Upload   Total   Spent    Left  Speed
-wordpress  |   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 6831k  100 6831k    0     0  43.0M      0 --:--:-- --:--:-- --:--:-- 43.0M
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== MARIADB IS NOT RESPONDING ========]
-wordpress  | Error: WordPress files seem to already be present here.
-wordpress  | Error: The 'wp-config.php' file already exists.
-wordpress  | Error: Error establishing a database connection. This either means that the username and password information in your `wp-config.php` file is incorrect or that contact with the database server at `mariadb:3306` could not be established. This could mean your host’s database server is down.
-wordpress  | Error: Error establishing a database connection.
-wordpress  | sed: can't read /etc/php/7.4/fpm/pool.d/www.conf: No such file or directory
-wordpress  | ./conf.sh: line 47: /usr/sbin/php-fpm7.4: No such file or directory
-wordpress  |   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-wordpress  |                                  Dload  Upload   Total   Spent    Left  Speed
-wordpress  |   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 6831k  100 6831k    0     0  36.8M      0 --:--:-- --:--:-- --:--:-- 36.8M
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | [======== MARIADB IS NOT RESPONDING ========]
-wordpress  | Error: WordPress files seem to already be present here.
-wordpress  | Error: The 'wp-config.php' file already exists.
-wordpress  | Error: Error establishing a database connection. This either means that the username and password information in your `wp-config.php` file is incorrect or that contact with the database server at `mariadb:3306` could not be established. This could mean your host’s database server is down.
-wordpress  | Error: Error establishing a database connection.
-wordpress  | sed: can't read /etc/php/7.4/fpm/pool.d/www.conf: No such file or directory
-wordpress  | ./conf.sh: line 47: /usr/sbin/php-fpm7.4: No such file or directory
-wordpress  |   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-wordpress  |                                  Dload  Upload   Total   Spent    Left  Speed
-wordpress  |   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 6831k  100 6831k    0     0  41.4M      0 --:--:-- --:--:-- --:--:-- 41.4M
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | [======== MARIADB IS NOT RESPONDING ========]
-wordpress  | Error: WordPress files seem to already be present here.
-wordpress  | Error: The 'wp-config.php' file already exists.
-wordpress  | Error: Error establishing a database connection. This either means that the username and password information in your `wp-config.php` file is incorrect or that contact with the database server at `mariadb:3306` could not be established. This could mean your host’s database server is down.
-wordpress  | Error: Error establishing a database connection.
-wordpress  | sed: can't read /etc/php/7.4/fpm/pool.d/www.conf: No such file or directory
-wordpress  | ./conf.sh: line 47: /usr/sbin/php-fpm7.4: No such file or directory
-wordpress  |   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-wordpress  |                                  Dload  Upload   Total   Spent    Left  Speed
-wordpress  |   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 6831k  100 6831k    0     0  39.9M      0 --:--:-- --:--:-- --:--:-- 39.9M
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | [======== MARIADB IS NOT RESPONDING ========]
-wordpress  | Error: WordPress files seem to already be present here.
-wordpress  | Error: The 'wp-config.php' file already exists.
-wordpress  | Error: Error establishing a database connection. This either means that the username and password information in your `wp-config.php` file is incorrect or that contact with the database server at `mariadb:3306` could not be established. This could mean your host’s database server is down.
-wordpress  | Error: Error establishing a database connection.
-wordpress  | sed: can't read /etc/php/7.4/fpm/pool.d/www.conf: No such file or directory
-wordpress  | ./conf.sh: line 47: /usr/sbin/php-fpm7.4: No such file or directory
-wordpress  |   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-wordpress  |                                  Dload  Upload   Total   Spent    Left  Speed
-wordpress  |   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 6831k  100 6831k    0     0  37.4M      0 --:--:-- --:--:-- --:--:-- 37.4M
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | [======== MARIADB IS NOT RESPONDING ========]
-wordpress  | Error: WordPress files seem to already be present here.
-wordpress  | Error: The 'wp-config.php' file already exists.
-wordpress  | Error: Error establishing a database connection. This either means that the username and password information in your `wp-config.php` file is incorrect or that contact with the database server at `mariadb:3306` could not be established. This could mean your host’s database server is down.
-wordpress  | Error: Error establishing a database connection.
-wordpress  | sed: can't read /etc/php/7.4/fpm/pool.d/www.conf: No such file or directory
-wordpress  | ./conf.sh: line 47: /usr/sbin/php-fpm7.4: No such file or directory
-wordpress  |   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-wordpress  |                                  Dload  Upload   Total   Spent    Left  Speed
-wordpress  |   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 75 6831k   75 5157k    0     0  32.0M      0 --:--:-- --:--:-- --:--:-- 31.8M100 6831k  100 6831k    0     0  35.2M      0 --:--:-- --:--:-- --:--:-- 35.1M
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | [======== MARIADB IS NOT RESPONDING ========]
-wordpress  | Error: WordPress files seem to already be present here.
-wordpress  | Error: The 'wp-config.php' file already exists.
-wordpress  | Error: Error establishing a database connection. This either means that the username and password information in your `wp-config.php` file is incorrect or that contact with the database server at `mariadb:3306` could not be established. This could mean your host’s database server is down.
-wordpress  | Error: Error establishing a database connection.
-wordpress  | sed: can't read /etc/php/7.4/fpm/pool.d/www.conf: No such file or directory
-wordpress  | ./conf.sh: line 47: /usr/sbin/php-fpm7.4: No such file or directory
-wordpress  |   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-wordpress  |                                  Dload  Upload   Total   Spent    Left  Speed
-wordpress  |   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0 6831k    0  5503    0     0  33554      0  0:03:28 --:--:--  0:03:28 33351100 6831k  100 6831k    0     0  21.4M      0 --:--:-- --:--:-- --:--:-- 21.3M
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.3) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | [======== MARIADB IS NOT RESPONDING ========]
-wordpress  | Error: WordPress files seem to already be present here.
-wordpress  | Error: The 'wp-config.php' file already exists.
-wordpress  | Error: Error establishing a database connection. This either means that the username and password information in your `wp-config.php` file is incorrect or that contact with the database server at `mariadb:3306` could not be established. This could mean your host’s database server is down.
-wordpress  | Error: Error establishing a database connection.
-wordpress  | sed: can't read /etc/php/7.4/fpm/pool.d/www.conf: No such file or directory
-wordpress  | ./conf.sh: line 47: /usr/sbin/php-fpm7.4: No such file or directory
-wordpress  |   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-wordpress  |                                  Dload  Upload   Total   Spent    Left  Speed
-wordpress  |   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 6831k  100 6831k    0     0  34.0M      0 --:--:-- --:--:-- --:--:-- 34.0M
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | [======== MARIADB IS NOT RESPONDING ========]
-wordpress  | Error: WordPress files seem to already be present here.
-wordpress  | Error: The 'wp-config.php' file already exists.
-wordpress  | Error: Error establishing a database connection. This either means that the username and password information in your `wp-config.php` file is incorrect or that contact with the database server at `mariadb:3306` could not be established. This could mean your host’s database server is down.
-wordpress  | Error: Error establishing a database connection.
+wordpress  | WordPress is already installed.
+wordpress  | Error: The 'muhammet' username is already registered.
 wordpress  | sed: can't read /etc/php/7.4/fpm/pool.d/www.conf: No such file or directory
 wordpress  | ./conf.sh: line 47: /usr/sbin/php-fpm7.4: No such file or directory
 wordpress  |   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
 wordpress  |                                  Dload  Upload   Total   Spent    Left  Speed
 wordpress  |   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 6831k  100 6831k    0     0  34.9M      0 --:--:-- --:--:-- --:--:-- 34.9M
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | [======== MARIADB IS NOT RESPONDING ========]
+wordpress  | Connection to mariadb (172.29.0.2) 3306 port [tcp/mysql] succeeded!
+wordpress  | [======== MARIADB IS UP AND RUNNING ========]
 wordpress  | Error: WordPress files seem to already be present here.
 wordpress  | Error: The 'wp-config.php' file already exists.
-wordpress  | Error: Error establishing a database connection. This either means that the username and password information in your `wp-config.php` file is incorrect or that contact with the database server at `mariadb:3306` could not be established. This could mean your host’s database server is down.
-wordpress  | Error: Error establishing a database connection.
+wordpress  | WordPress is already installed.
+wordpress  | Error: The 'muhammet' username is already registered.
 wordpress  | sed: can't read /etc/php/7.4/fpm/pool.d/www.conf: No such file or directory
 wordpress  | ./conf.sh: line 47: /usr/sbin/php-fpm7.4: No such file or directory
 wordpress  |   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
 wordpress  |                                  Dload  Upload   Total   Spent    Left  Speed
-wordpress  |   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 6831k  100 6831k    0     0  30.0M      0 --:--:-- --:--:-- --:--:-- 30.0M
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: connect to mariadb (172.28.0.2) port 3306 (tcp) failed: Connection refused
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | [======== MARIADB IS NOT RESPONDING ========]
+wordpress  |   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 6831k  100 6831k    0     0  27.9M      0 --:--:-- --:--:-- --:--:-- 27.9M
+wordpress  | Connection to mariadb (172.29.0.2) 3306 port [tcp/mysql] succeeded!
+wordpress  | [======== MARIADB IS UP AND RUNNING ========]
 wordpress  | Error: WordPress files seem to already be present here.
 wordpress  | Error: The 'wp-config.php' file already exists.
-wordpress  | Error: Error establishing a database connection. This either means that the username and password information in your `wp-config.php` file is incorrect or that contact with the database server at `mariadb:3306` could not be established. This could mean your host’s database server is down.
-wordpress  | Error: Error establishing a database connection.
+wordpress  | WordPress is already installed.
+wordpress  | Error: The 'muhammet' username is already registered.
 wordpress  | sed: can't read /etc/php/7.4/fpm/pool.d/www.conf: No such file or directory
 wordpress  | ./conf.sh: line 47: /usr/sbin/php-fpm7.4: No such file or directory
 wordpress  |   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
 wordpress  |                                  Dload  Upload   Total   Spent    Left  Speed
-wordpress  |   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 6831k  100 6831k    0     0  36.0M      0 --:--:-- --:--:-- --:--:-- 36.0M
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | [======== MARIADB IS NOT RESPONDING ========]
+wordpress  |   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 6831k  100 6831k    0     0  31.9M      0 --:--:-- --:--:-- --:--:-- 32.0M
+wordpress  | Connection to mariadb (172.29.0.2) 3306 port [tcp/mysql] succeeded!
+wordpress  | [======== MARIADB IS UP AND RUNNING ========]
 wordpress  | Error: WordPress files seem to already be present here.
 wordpress  | Error: The 'wp-config.php' file already exists.
-wordpress  | Error: Error establishing a database connection. This either means that the username and password information in your `wp-config.php` file is incorrect or that contact with the database server at `mariadb:3306` could not be established. This could mean your host’s database server is down.
-wordpress  | Error: Error establishing a database connection.
+wordpress  | WordPress is already installed.
+wordpress  | Error: The 'muhammet' username is already registered.
 wordpress  | sed: can't read /etc/php/7.4/fpm/pool.d/www.conf: No such file or directory
 wordpress  | ./conf.sh: line 47: /usr/sbin/php-fpm7.4: No such file or directory
 wordpress  |   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
 wordpress  |                                  Dload  Upload   Total   Spent    Left  Speed
-wordpress  |   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 6831k  100 6831k    0     0  37.4M      0 --:--:-- --:--:-- --:--:-- 37.4M
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
-wordpress  | nc: getaddrinfo for host "mariadb" port 3306: Name or service not known
-wordpress  | [======== WAITING FOR MARIADB TO START... ========]
+wordpress  |   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 6831k  100 6831k    0     0  33.8M      0 --:--:-- --:--:-- --:--:-- 33.8M
+wordpress  | Connection to mariadb (172.29.0.2) 3306 port [tcp/mysql] succeeded!
+wordpress  | [======== MARIADB IS UP AND RUNNING ========]
+wordpress  | Error: WordPress files seem to already be present here.
+wordpress  | Error: The 'wp-config.php' file already exists.
+wordpress  | WordPress is already installed.
+wordpress  | Error: The 'muhammet' username is already registered.
+wordpress  | sed: can't read /etc/php/7.4/fpm/pool.d/www.conf: No such file or directory
+wordpress  | ./conf.sh: line 47: /usr/sbin/php-fpm7.4: No such file or directory
+wordpress  |   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+wordpress  |                                  Dload  Upload   Total   Spent    Left  Speed
+wordpress  |   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 6831k  100 6831k    0     0  27.6M      0 --:--:-- --:--:-- --:--:-- 27.6M
+wordpress  | Connection to mariadb (172.29.0.2) 3306 port [tcp/mysql] succeeded!
+wordpress  | [======== MARIADB IS UP AND RUNNING ========]
+wordpress  | Error: WordPress files seem to already be present here.
+wordpress  | Error: The 'wp-config.php' file already exists.
+wordpress  | WordPress is already installed.
+wordpress  | Error: The 'muhammet' username is already registered.
+wordpress  | sed: can't read /etc/php/7.4/fpm/pool.d/www.conf: No such file or directory
+wordpress  | ./conf.sh: line 47: /usr/sbin/php-fpm7.4: No such file or directory
+wordpress  |   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+wordpress  |                                  Dload  Upload   Total   Spent    Left  Speed
+wordpress  |   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 6831k  100 6831k    0     0  20.9M      0 --:--:-- --:--:-- --:--:-- 20.9M
+wordpress  | Connection to mariadb (172.29.0.2) 3306 port [tcp/mysql] succeeded!
+wordpress  | [======== MARIADB IS UP AND RUNNING ========]
+wordpress  | Error: WordPress files seem to already be present here.
+wordpress  | Error: The 'wp-config.php' file already exists.
+wordpress  | WordPress is already installed.
+wordpress  | Error: The 'muhammet' username is already registered.
+wordpress  | sed: can't read /etc/php/7.4/fpm/pool.d/www.conf: No such file or directory
+wordpress  | ./conf.sh: line 47: /usr/sbin/php-fpm7.4: No such file or directory
