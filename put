@@ -1,4 +1,4 @@
-nginx    | /docker-entrypoint.sh: Configuration complete; ready for start up
-nginx    | 2024/06/15 21:03:40 [emerg] 1#1: cannot load certificate "/etc/ssl/nginx-selfsigned.crt": BIO_new_file() failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/ssl/nginx-selfsigned.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
-nginx    | nginx: [emerg] cannot load certificate "/etc/ssl/nginx-selfsigned.crt": BIO_new_file() failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/ssl/nginx-selfsigned.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+ ⠿ Container nginx      Starting                                                  1.2s 
+Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "/script.sh": permission denied: unknown
+make: *** [Makefile:10: up] Error 1
 
